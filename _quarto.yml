@@ -1,0 +1,30 @@
+project:
+  type: website
+  output-dir: docs
+  render:  
+    - "*.qmd"
+    - "exercises/"
+    # - "!exercises/"
+
+website:
+  title: ""
+  sidebar:
+    style: "floating"
+    logo: UU_logo.png
+    contents:
+      - href: index.qmd
+        text: "Overview"
+      - href: exercises/installation.qmd
+        text: "Installation"
+      - href: exercises/Part A - Introduction/Practical_A_walkthrough.qmd
+        text: "Part 1: R code"
+      - href: exercises/exercise2.qmd
+        text: "Exercise 2"
+      - href: exercises/exercise3.qmd
+        text: "Exercise 3"
+  body-footer: "--- <br><br> Copyright Hanne Oberman, 2025 - [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) <br> Materials developed by [Amices](https://amices.org) team - Methodology & Statistics - Utrecht University"
+
+format:
+  html:
+    theme: cosmo
+    toc: true

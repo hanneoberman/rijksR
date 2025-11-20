@@ -31,7 +31,7 @@ R is rapidly becoming the standard platform for data manipulation, visualization
 Materials covered:
 
 ##### Day 1:
-- Installing R/Rstudio or signing up for RStudio Cloud (done at home) 
+- Installing R/Rstudio or signing up for Posit Cloud (done at home) 
 - Getting comfortable with notebooks/projects/scripts
 - Getting help
 - Variables in R: basic data types (character, numeric, integer, logical, date) and data structures (vectors, matrices, lists, data.frames)
@@ -52,17 +52,17 @@ Materials covered:
 - Speeding up queries with SQLite
 
 
-### Daily schedule 
+### Schedule 
 
 | Start  |  End    | What?      |
 |:-------|:------|:-----------|
-| 09.00 | 10.00  | Lecture |
-| 10:00 | 10.45  | Practical |
-| 10.45 | 11.00  | Discussion |
+| 13.00 | 13.30  | Lecture |
+| 13:30 | 14.15  | Practical |
+| 14.15 | 14.30  | Discussion |
 |       | break |        |
-| 11.00 | 11.45  | Lecture |
-| 11:45 | 12.40  | Practical |
-| 12:40 | 13.00  | Discussion |
+| 15.00 | 15.30  | Lecture |
+| 15:45 | 16.30  | Practical |
+| 16:30 | 17.00  | Discussion |
 
 
 

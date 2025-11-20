@@ -1,0 +1,121 @@
+---
+title: "Installation"
+toc: true
+---
+
+**System requirements**
+
+You will either need a computer for which you have full write access and administrator
+rights, or run the code via an online server. 
+
+We will explore programming and compiling in this tutorial, so you will 
+need full access to your machine. Some corporate computers (and university 
+computers) restrict the access of their users. I therefore advise you to use a 
+personal computer for this course, if possible. 
+Or to access R online via Posit Cloud (see @sec-cloud below).
+
+## Local version of R 
+
+If you are already using a local version of R, you can skip ahead to @sec-existing.
+
+### Fresh installation {#sec-fresh}
+
+**1. Install R**
+
+You can obtain a copy of R [here](https://cran.r-project.org). We won't use 
+R directly in this course. Rather, we'll call R through RStudio. Therefore, 
+you also need to install RStudio. 
+
+**2. Install RStudio Desktop**
+
+RStudio is an Integrated Development Environment (IDE) for R. You can 
+download RStudio as stand-alone software [here](https://posit.co/download/rstudio-desktop/#download). 
+You want the free, open-source `RStudio Desktop` version.
+
+**3. Start RStudio, and install packages**
+
+Open RStudio, and copy-paste the following line of code into the console pane to 
+install the packages you will need for the exercises.
+
+- If nothing happens after you paste the code, try hitting the "Enter/Return" 
+key.
+
+```{r eval = FALSE, echo = TRUE}
+install.packages(c("quarto", "knitr", "dplyr", "mice"), dependencies = TRUE)
+```
+
+If you are not sure where to paste the code, use the following figure to 
+identify the console.
+
+- The console pane occupies the left half of the RStudio window shown in this 
+image.
+
+<center>
+  <img src="./img/rstudio1.png" alt="HTML5 Icon" width = 95%>
+</center>
+
+If you are asked the following:
+
+```
+Do you want to install from sources the package which needs 
+compilation? (Yes/no/cancel)
+```
+
+Type `Yes` in the console, and press the "Enter/Return" key (or click the 
+corresponding button if the question presents as a dialog box). 
+
+### Existing installation  {#sec-existing}
+
+__1. Check R version (you will need version 4.1 or higher)__
+
+```{r}
+R.version$version.string
+```
+
+__2. Check installation of R packages__
+
+You can verify whether all packages are installed correctly by running:
+
+```{r}
+all(c("quarto", "knitr", "dplyr", "mice") %in% rownames(installed.packages()))
+```
+
+Missing packages can be installed as follows:
+```{r}
+#| eval: false
+install.packages(c("quarto", "knitr", "dplyr", "mice"))
+```
+
+## Online version of R  {#sec-cloud}
+
+**1. Choose an online server to run R** 
+
+If the suggested steps fail or you have insufficient rights on your machine, you 
+can use the following web-based solutions. 
+
+1. Open a free account on [posit.cloud](https://posit.cloud). 
+   - You can run your own cloud-based RStudio environment there.
+   
+2. If you are a Utrecht University student, you can use Utrecht University's [MyWorkPlace](https://myworkplace.uu.nl/). 
+   - You will have access to R and RStudio there. When you start a new 
+   MyWorkPlace session, you may need to (re)install packages. 
+
+Naturally, you will need internet access to use these services. 
+
+__1. Go to [https://posit.cloud/](https://posit.cloud/) and click on "Sign Up" in the top-right corner.__
+
+![](img/positcloud-signup.png){width="70%"}
+
+__2. Select "Cloud free" by clicking "Learn more" and sign up.__
+
+![](img/positcloud-plan.png){width="70%"}
+
+__3. Go to [https://docs.posit.co/cloud/get_started/](https://docs.posit.co/cloud/get_started/) and follow the instructions up to and including "Create a Project"__
+
+__4. Open a fresh `R`-file: "File --> New file --> R script"__
+
+![](img/positcloud-newfile.png){width="70%"}
+
+---
+
+End of Exercise 0

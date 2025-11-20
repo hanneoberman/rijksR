@@ -1,0 +1,80 @@
+---
+title: "R 101"
+subtitle: "A quick-and-dirty introduction to R" 
+---
+
+This course covers a gentle introduction to `R` and `RStudio`, focusing on learning the basics __well__. 
+
+R is rapidly becoming the standard platform for data manipulation, visualization and analysis and has a number of advantages over other statistical software packages. A wide community of users contribute to R, resulting in an enormous coverage of statistical procedures, including many that are not available in any other statistical program. Furthermore, it is highly flexible for programming and scripting purposes, for example when manipulating data or creating professional plots. However, R lacks standard GUI menus, as in SPSS for example, from which to choose what statistical test to perform or which graph to create. As a consequence, R is more challenging to master. Therefore, this course offers an elaborate introduction into statistical programming in R. Students learn to operate R, make plots, fit, assess and interpret a variety of basic statistical models and do advanced statistical programming and data manipulation. 
+
+## Schedule 
+
+| Start  |  End    | What?      |
+|:-------|:------|:-----------|
+| 13.00 | 13.30  | Lecture |
+| 13:30 | 14.15  | Practical |
+| 14.15 | 14.30  | Discussion |
+|       | break |        |
+| 15.00 | 15.30  | Lecture |
+| 15:45 | 16.30  | Practical |
+| 16:30 | 17.00  | Discussion |
+
+
+## Course contents
+
+### Installation
+
+Before you start the exercises, make sure you can use R either locally on your 
+PC or online through Posit Cloud.
+
+- [Installation](exercises/installation.html)
+
+
+
+<!-- ##### Day 1: -->
+<!-- - Installing R/Rstudio or signing up for Posit Cloud (done at home)  -->
+<!-- - Getting comfortable with notebooks/projects/scripts -->
+<!-- - Getting help -->
+<!-- - Variables in R: basic data types (character, numeric, integer, logical, date) and data structures (vectors, matrices, lists, data.frames) -->
+<!-- - Understanding/installing packages -->
+<!-- - Reading a CSV and calculating descriptive statistics -->
+<!-- - Control flow (if-else statements and for loops) -->
+<!-- - Best practices in R -->
+<!-- - Reproducible science and dependency management in R -->
+<!-- - If time allows: data visualization: design and storytelling  -->
+<!-- (slides)[https://github.com/jgarciab/workshop_data_viz] -->
+
+<!-- ##### Day 2: -->
+<!-- - Functions: creating your own functions -->
+<!-- - Principles of tidy data and short comparison of base R and the tidyverse -->
+<!-- - Reading and writing files in several formats -->
+<!-- - Data wrangling with the tidyverse -->
+<!-- - Inferential statistics: A 5-min primer of linear regression -->
+<!-- - Speeding up queries with SQLite -->
+
+
+
+<!----------------------------------------------------------------------------->
+
+
+### Exercises
+
+This course is broken into the following three exercises.
+
+- [Part 1](exercises/exercise1.html)
+- [Part 2](exercises/exercise2.html)
+- [Part 3](exercises/exercise3.html)
+
+### Solutions
+
+Below, you can find suggested solutions for the above exercises. 
+
+- [Exercise 1 Solutions](exercises/exercise1_solutions.html)
+- [Exercise 2 Solutions](exercises/exercise2_solutions.html)
+- [Exercise 3 Solutions](exercises/exercise3_solutions.html)
+
+These solutions are provided so you can check your work and unstick yourself if
+you really can't figure out one of the exercise questions. You should make a 
+concerted effort to complete each exercise yourself before you view these 
+solutions. You won't get much out of this tutorial if you skip right to the 
+answers. 
