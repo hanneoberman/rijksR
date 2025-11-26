@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-11-28">
 
-<title>R 101</title>
+<title>Statistical programming with R</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -119,20 +120,26 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exercises/Part A - Introduction/Practical_A_walkthrough.html" class="sidebar-item-text sidebar-link">
+  <a href="./exercises/Part A - Introduction/01_code.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Part 1: R code</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exercises/exercise2.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercise 2</span></a>
+  <a href="./exercises/Part B - Data types and structures/02_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 2: Data in R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./exercises/exercise3.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercise 3</span></a>
+  <a href="./exercises/Part C - Programming/03_programming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 3: Programming</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./exercises/Part D - Tidy/04_functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 4: Functions</span></a>
   </div>
 </li>
     </ul>
@@ -146,11 +153,11 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#schedule" id="toc-schedule" class="nav-link active" data-scroll-target="#schedule">Schedule</a></li>
+  <li><a href="#background" id="toc-background" class="nav-link" data-scroll-target="#background">Background</a></li>
   <li><a href="#course-contents" id="toc-course-contents" class="nav-link" data-scroll-target="#course-contents">Course contents</a>
   <ul class="collapse">
-  <li><a href="#installation" id="toc-installation" class="nav-link" data-scroll-target="#installation">Installation</a></li>
+  <li><a href="#requirements" id="toc-requirements" class="nav-link" data-scroll-target="#requirements">Requirements</a></li>
   <li><a href="#exercises" id="toc-exercises" class="nav-link" data-scroll-target="#exercises">Exercises</a></li>
-  <li><a href="#solutions" id="toc-solutions" class="nav-link" data-scroll-target="#solutions">Solutions</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -160,8 +167,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">R 101</h1>
-<p class="subtitle lead">A quick-and-dirty introduction to R</p>
+<h1 class="title">Statistical programming with R</h1>
+<p class="subtitle lead">Workshop for Rijkstrainees</p>
 </div>
 
 
@@ -169,6 +176,12 @@ ul.task-list li input[type="checkbox"] {
 <div class="quarto-title-meta">
 
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">November 28, 2025</p>
+    </div>
+  </div>
   
     
   </div>
@@ -178,8 +191,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>This course covers a gentle introduction to <code>R</code> and <code>RStudio</code>, focusing on learning the basics <strong>well</strong>.</p>
-<p>R is rapidly becoming the standard platform for data manipulation, visualization and analysis and has a number of advantages over other statistical software packages. A wide community of users contribute to R, resulting in an enormous coverage of statistical procedures, including many that are not available in any other statistical program. Furthermore, it is highly flexible for programming and scripting purposes, for example when manipulating data or creating professional plots. However, R lacks standard GUI menus, as in SPSS for example, from which to choose what statistical test to perform or which graph to create. As a consequence, R is more challenging to master. Therefore, this course offers an elaborate introduction into statistical programming in R. Students learn to operate R, make plots, fit, assess and interpret a variety of basic statistical models and do advanced statistical programming and data manipulation.</p>
+<p>This course covers a gentle introduction to <code>R</code> and <code>RStudio</code>, focusing on learning the basics <em>well</em>.</p>
 <section id="schedule" class="level2">
 <h2 class="anchored" data-anchor-id="schedule">Schedule</h2>
 <table class="caption-top table">
@@ -229,10 +241,14 @@ ul.task-list li input[type="checkbox"] {
 </tbody>
 </table>
 </section>
+<section id="background" class="level2">
+<h2 class="anchored" data-anchor-id="background">Background</h2>
+<p>R is rapidly becoming the standard platform for data manipulation, visualization and analysis and has a number of advantages over other statistical software packages. A wide community of users contribute to R, resulting in an enormous coverage of statistical procedures, including many that are not available in any other statistical program. Furthermore, it is highly flexible for programming and scripting purposes, for example when manipulating data or creating professional plots. However, R lacks standard GUI menus, as in SPSS for example, from which to choose what statistical test to perform or which graph to create. As a consequence, R is more challenging to master. Therefore, this course offers an elaborate introduction into statistical programming in R. Students learn to operate R, make plots, fit, assess and interpret a variety of basic statistical models and do advanced statistical programming and data manipulation.</p>
+</section>
 <section id="course-contents" class="level2">
 <h2 class="anchored" data-anchor-id="course-contents">Course contents</h2>
-<section id="installation" class="level3">
-<h3 class="anchored" data-anchor-id="installation">Installation</h3>
+<section id="requirements" class="level3">
+<h3 class="anchored" data-anchor-id="requirements">Requirements</h3>
 <p>Before you start the exercises, make sure you can use R either locally on your PC or online through Posit Cloud.</p>
 <ul>
 <li><a href="exercises/installation.html">Installation</a></li>
@@ -260,22 +276,13 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <section id="exercises" class="level3">
 <h3 class="anchored" data-anchor-id="exercises">Exercises</h3>
-<p>This course is broken into the following three exercises.</p>
+<p>This course is broken into the following four parts.</p>
 <ul>
-<li><a href="exercises/exercise1.html">Part 1</a></li>
-<li><a href="exercises/exercise2.html">Part 2</a></li>
-<li><a href="exercises/exercise3.html">Part 3</a></li>
+<li><a href="./exercises/Part A - Introduction/01_code.html">Part 1: R code</a></li>
+<li><a href="./exercises/Part B - Data types and structures/02_data.html">Part 2: Data in R</a></li>
+<li><a href="./exercises/Part C - Programming/03_programming.html">Part 3: Programming</a></li>
+<li><a href="./exercises/Part D - Tidy/04_functions.html">Part 4: Functions</a></li>
 </ul>
-</section>
-<section id="solutions" class="level3">
-<h3 class="anchored" data-anchor-id="solutions">Solutions</h3>
-<p>Below, you can find suggested solutions for the above exercises.</p>
-<ul>
-<li><a href="exercises/exercise1_solutions.html">Exercise 1 Solutions</a></li>
-<li><a href="exercises/exercise2_solutions.html">Exercise 2 Solutions</a></li>
-<li><a href="exercises/exercise3_solutions.html">Exercise 3 Solutions</a></li>
-</ul>
-<p>These solutions are provided so you can check your work and unstick yourself if you really can’t figure out one of the exercise questions. You should make a concerted effort to complete each exercise yourself before you view these solutions. You won’t get much out of this tutorial if you skip right to the answers.</p>
 
 
 </section>

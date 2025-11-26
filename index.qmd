@@ -1,11 +1,10 @@
 ---
-title: "R 101"
-subtitle: "A quick-and-dirty introduction to R" 
+title: "Statistical programming with R"
+subtitle: "Workshop for Rijkstrainees" 
+date: "Nov 28 2025"
 ---
 
-This course covers a gentle introduction to `R` and `RStudio`, focusing on learning the basics __well__. 
-
-R is rapidly becoming the standard platform for data manipulation, visualization and analysis and has a number of advantages over other statistical software packages. A wide community of users contribute to R, resulting in an enormous coverage of statistical procedures, including many that are not available in any other statistical program. Furthermore, it is highly flexible for programming and scripting purposes, for example when manipulating data or creating professional plots. However, R lacks standard GUI menus, as in SPSS for example, from which to choose what statistical test to perform or which graph to create. As a consequence, R is more challenging to master. Therefore, this course offers an elaborate introduction into statistical programming in R. Students learn to operate R, make plots, fit, assess and interpret a variety of basic statistical models and do advanced statistical programming and data manipulation. 
+This course covers a gentle introduction to `R` and `RStudio`, focusing on learning the basics *well*. 
 
 ## Schedule 
 
@@ -19,17 +18,18 @@ R is rapidly becoming the standard platform for data manipulation, visualization
 | 15:45 | 16.30  | Practical |
 | 16:30 | 17.00  | Discussion |
 
+## Background
+
+R is rapidly becoming the standard platform for data manipulation, visualization and analysis and has a number of advantages over other statistical software packages. A wide community of users contribute to R, resulting in an enormous coverage of statistical procedures, including many that are not available in any other statistical program. Furthermore, it is highly flexible for programming and scripting purposes, for example when manipulating data or creating professional plots. However, R lacks standard GUI menus, as in SPSS for example, from which to choose what statistical test to perform or which graph to create. As a consequence, R is more challenging to master. Therefore, this course offers an elaborate introduction into statistical programming in R. Students learn to operate R, make plots, fit, assess and interpret a variety of basic statistical models and do advanced statistical programming and data manipulation. 
 
 ## Course contents
 
-### Installation
+### Requirements
 
 Before you start the exercises, make sure you can use R either locally on your 
 PC or online through Posit Cloud.
 
 - [Installation](exercises/installation.html)
-
-
 
 <!-- ##### Day 1: -->
 <!-- - Installing R/Rstudio or signing up for Posit Cloud (done at home)  -->
@@ -59,22 +59,10 @@ PC or online through Posit Cloud.
 
 ### Exercises
 
-This course is broken into the following three exercises.
+This course is broken into the following four parts.
 
-- [Part 1](exercises/exercise1.html)
-- [Part 2](exercises/exercise2.html)
-- [Part 3](exercises/exercise3.html)
+- [Part 1: R code](exercises/Part A - Introduction/01_code.qmd)
+- [Part 2: Data in R](exercises/Part B - Data types and structures/02_data.qmd)
+- [Part 3: Programming](exercises/Part C - Programming/03_programming.qmd)
+- [Part 4: Functions](exercises/Part D - Tidy/04_functions.qmd)
 
-### Solutions
-
-Below, you can find suggested solutions for the above exercises. 
-
-- [Exercise 1 Solutions](exercises/exercise1_solutions.html)
-- [Exercise 2 Solutions](exercises/exercise2_solutions.html)
-- [Exercise 3 Solutions](exercises/exercise3_solutions.html)
-
-These solutions are provided so you can check your work and unstick yourself if
-you really can't figure out one of the exercise questions. You should make a 
-concerted effort to complete each exercise yourself before you view these 
-solutions. You won't get much out of this tutorial if you skip right to the 
-answers. 

@@ -184,20 +184,26 @@ window.Quarto = {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/Part A - Introduction/Practical_A_walkthrough.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/Part A - Introduction/01_code.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Part 1: R code</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/exercise2.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercise 2</span></a>
+  <a href="../../exercises/Part B - Data types and structures/02_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 2: Data in R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/exercise3.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercise 3</span></a>
+  <a href="../../exercises/Part C - Programming/03_programming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 3: Programming</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../exercises/Part D - Tidy/04_functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 4: Functions</span></a>
   </div>
 </li>
     </ul>
@@ -578,11 +584,11 @@ window.Quarto = {
 <span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>d</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>          V1       V2 V3
-1  1.4030114 9.422615  a
-2 -1.4024883 3.546447  a
-3  0.3778380 7.116228  b
-4 -0.8879443 4.002428  b
-5  0.6638642 5.585334  b</code></pre>
+1  0.3754084 5.256960  a
+2 -0.5619464 5.629622  a
+3 -0.3237383 6.658481  b
+4 -0.4082462 2.280533  b
+5 -0.3149997 6.759480  b</code></pre>
 </div>
 </div>
 <p>We ‘filled’ a dataframe with two randomly generated sets from the normal distribution - where <span class="math inline">\(V1\)</span> is standard normal and <span class="math inline">\(V2 \sim N(5,2)\)</span> - and a character set.</p>
@@ -595,22 +601,22 @@ window.Quarto = {
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">row.names</span>(d) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"row 1"</span>, <span class="st">"row 2"</span>, <span class="st">"row 3"</span>, <span class="st">"row 4"</span>, <span class="st">"row 5"</span>)</span>
 <span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>d</span>
 <span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a><span class="do">##               V1       V2 V3</span></span>
-<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="do">## row 1  1.4030114 9.422615  a</span></span>
-<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a><span class="do">## row 2 -1.4024883 3.546447  a</span></span>
-<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a><span class="do">## row 3  0.3778380 7.116228  b</span></span>
-<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a><span class="do">## row 4 -0.8879443 4.002428  b</span></span>
-<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a><span class="do">## row 5  0.6638642 5.585334  b</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="do">## row 1  0.3754084 5.256960  a</span></span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a><span class="do">## row 2 -0.5619464 5.629622  a</span></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a><span class="do">## row 3 -0.3237383 6.658481  b</span></span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a><span class="do">## row 4 -0.4082462 2.280533  b</span></span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a><span class="do">## row 5 -0.3149997 6.759480  b</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Columns</span></span>
 <span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(d) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"V1"</span>, <span class="st">"V2_new"</span>, <span class="st">"V3"</span>)</span>
 <span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>d</span>
 <span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a><span class="do">##               V1   V2_new V3</span></span>
-<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="do">## row 1  1.4030114 9.422615  a</span></span>
-<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a><span class="do">## row 2 -1.4024883 3.546447  a</span></span>
-<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a><span class="do">## row 3  0.3778380 7.116228  b</span></span>
-<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a><span class="do">## row 4 -0.8879443 4.002428  b</span></span>
-<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a><span class="do">## row 5  0.6638642 5.585334  b</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="do">## row 1  0.3754084 5.256960  a</span></span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a><span class="do">## row 2 -0.5619464 5.629622  a</span></span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a><span class="do">## row 3 -0.3237383 6.658481  b</span></span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a><span class="do">## row 4 -0.4082462 2.280533  b</span></span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a><span class="do">## row 5 -0.3149997 6.759480  b</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="retrieving-row-elements-in-data-frames" class="level2">
@@ -619,13 +625,13 @@ window.Quarto = {
 <div class="cell">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>d[<span class="st">"row 3"</span>, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>            V1   V2_new V3
-row 3 0.377838 7.116228  b</code></pre>
+<pre><code>              V1   V2_new V3
+row 3 -0.3237383 6.658481  b</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>d[<span class="dv">3</span>, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>            V1   V2_new V3
-row 3 0.377838 7.116228  b</code></pre>
+<pre><code>              V1   V2_new V3
+row 3 -0.3237383 6.658481  b</code></pre>
 </div>
 </div>
 <p>CAREFUL! You always need the comma (,) when filtering by rows. Otherwise you filter by column!</p>
@@ -635,23 +641,23 @@ row 3 0.377838 7.116228  b</code></pre>
 <p>All</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span>V2_new</span>
-<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 9.422615 3.546447 7.116228 4.002428 5.585334</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 5.256960 5.629622 6.658481 2.280533 6.759480</span></span>
 <span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a>d[[<span class="st">"V2_new"</span>]]</span>
-<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 9.422615 3.546447 7.116228 4.002428 5.585334</span></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 5.256960 5.629622 6.658481 2.280533 6.759480</span></span>
 <span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>d[, <span class="st">"V2_new"</span>] <span class="co"># Careful! In tibbles this returns a one-col tibble</span></span>
-<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 9.422615 3.546447 7.116228 4.002428 5.585334</span></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 5.256960 5.629622 6.658481 2.280533 6.759480</span></span>
 <span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>d[, <span class="dv">2</span>] <span class="co"># Careful! In tibbles this returns a one-col tibble</span></span>
-<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 9.422615 3.546447 7.116228 4.002428 5.585334</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 5.256960 5.629622 6.658481 2.280533 6.759480</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Using it without the comma returns a dataframe</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a>d[<span class="st">"V2_new"</span>] <span class="co"># and d[2]</span></span>
 <span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="do">##         V2_new</span></span>
-<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="do">## row 1 9.422615</span></span>
-<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="do">## row 2 3.546447</span></span>
-<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="do">## row 3 7.116228</span></span>
-<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a><span class="do">## row 4 4.002428</span></span>
-<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a><span class="do">## row 5 5.585334</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="do">## row 1 5.256960</span></span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a><span class="do">## row 2 5.629622</span></span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a><span class="do">## row 3 6.658481</span></span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a><span class="do">## row 4 2.280533</span></span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a><span class="do">## row 5 6.759480</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="retrieving-both" class="level2">
@@ -668,8 +674,8 @@ row 3 0.377838 7.116228  b</code></pre>
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a>d[<span class="dv">3</span><span class="sc">:</span><span class="dv">4</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>              V1   V2_new
-row 3  0.3778380 7.116228
-row 4 -0.8879443 4.002428</code></pre>
+row 3 -0.3237383 6.658481
+row 4 -0.4082462 2.280533</code></pre>
 </div>
 </div>
 </section>
@@ -683,11 +689,11 @@ row 4 -0.8879443 4.002428</code></pre>
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span>V3_factor <span class="ot">&lt;-</span> <span class="fu">factor</span>(d<span class="sc">$</span>V3, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">"Amsterdam"</span>,<span class="st">"Utrecht"</span>))</span>
 <span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a>d</span>
 <span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="do">##               V1   V2_new V3 V3_factor</span></span>
-<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="do">## row 1  1.4030114 9.422615  a Amsterdam</span></span>
-<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a><span class="do">## row 2 -1.4024883 3.546447  a Amsterdam</span></span>
-<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="do">## row 3  0.3778380 7.116228  b   Utrecht</span></span>
-<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a><span class="do">## row 4 -0.8879443 4.002428  b   Utrecht</span></span>
-<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a><span class="do">## row 5  0.6638642 5.585334  b   Utrecht</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a><span class="do">## row 1  0.3754084 5.256960  a Amsterdam</span></span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a><span class="do">## row 2 -0.5619464 5.629622  a Amsterdam</span></span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a><span class="do">## row 3 -0.3237383 6.658481  b   Utrecht</span></span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a><span class="do">## row 4 -0.4082462 2.280533  b   Utrecht</span></span>
+<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a><span class="do">## row 5 -0.3149997 6.759480  b   Utrecht</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Class</p>
 <div class="cell">
@@ -708,11 +714,11 @@ row 4 -0.8879443 4.002428</code></pre>
 <span id="cb51-2"><a href="#cb51-2" aria-hidden="true" tabindex="-1"></a>d</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>              V1   V2_new V3 V3_factor V2_int
-row 1  1.4030114 9.422615  a Amsterdam      9
-row 2 -1.4024883 3.546447  a Amsterdam      3
-row 3  0.3778380 7.116228  b   Utrecht      7
-row 4 -0.8879443 4.002428  b   Utrecht      4
-row 5  0.6638642 5.585334  b   Utrecht      5</code></pre>
+row 1  0.3754084 5.256960  a Amsterdam      5
+row 2 -0.5619464 5.629622  a Amsterdam      5
+row 3 -0.3237383 6.658481  b   Utrecht      6
+row 4 -0.4082462 2.280533  b   Utrecht      2
+row 5 -0.3149997 6.759480  b   Utrecht      6</code></pre>
 </div>
 </div>
 <div class="cell">
@@ -720,11 +726,11 @@ row 5  0.6638642 5.585334  b   Utrecht      5</code></pre>
 <span id="cb53-2"><a href="#cb53-2" aria-hidden="true" tabindex="-1"></a>d</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>              V1   V2_new V3 V3_factor V2_int V2_char
-row 1  1.4030114 9.422615  a Amsterdam      9       9
-row 2 -1.4024883 3.546447  a Amsterdam      3       3
-row 3  0.3778380 7.116228  b   Utrecht      7       7
-row 4 -0.8879443 4.002428  b   Utrecht      4       4
-row 5  0.6638642 5.585334  b   Utrecht      5       5</code></pre>
+row 1  0.3754084 5.256960  a Amsterdam      5       5
+row 2 -0.5619464 5.629622  a Amsterdam      5       5
+row 3 -0.3237383 6.658481  b   Utrecht      6       6
+row 4 -0.4082462 2.280533  b   Utrecht      2       2
+row 5 -0.3149997 6.759480  b   Utrecht      6       6</code></pre>
 </div>
 </div>
 </section>
@@ -760,11 +766,11 @@ row 5  0.6638642 5.585334  b   Utrecht      5       5</code></pre>
 
 [[2]]
               V1   V2_new V3 V3_factor V2_int V2_char
-row 1  1.4030114 9.422615  a Amsterdam      9       9
-row 2 -1.4024883 3.546447  a Amsterdam      3       3
-row 3  0.3778380 7.116228  b   Utrecht      7       7
-row 4 -0.8879443 4.002428  b   Utrecht      4       4
-row 5  0.6638642 5.585334  b   Utrecht      5       5</code></pre>
+row 1  0.3754084 5.256960  a Amsterdam      5       5
+row 2 -0.5619464 5.629622  a Amsterdam      5       5
+row 3 -0.3237383 6.658481  b   Utrecht      6       6
+row 4 -0.4082462 2.280533  b   Utrecht      2       2
+row 5 -0.3149997 6.759480  b   Utrecht      6       6</code></pre>
 </div>
 </div>
 <p>to obtain a list with a vector and a data frame.</p>
@@ -781,11 +787,11 @@ row 5  0.6638642 5.585334  b   Utrecht      5       5</code></pre>
 
 $`data frame`
               V1   V2_new V3 V3_factor V2_int V2_char
-row 1  1.4030114 9.422615  a Amsterdam      9       9
-row 2 -1.4024883 3.546447  a Amsterdam      3       3
-row 3  0.3778380 7.116228  b   Utrecht      7       7
-row 4 -0.8879443 4.002428  b   Utrecht      4       4
-row 5  0.6638642 5.585334  b   Utrecht      5       5</code></pre>
+row 1  0.3754084 5.256960  a Amsterdam      5       5
+row 2 -0.5619464 5.629622  a Amsterdam      5       5
+row 3 -0.3237383 6.658481  b   Utrecht      6       6
+row 4 -0.4082462 2.280533  b   Utrecht      2       2
+row 5 -0.3149997 6.759480  b   Utrecht      6       6</code></pre>
 </div>
 </div>
 </section>
@@ -806,11 +812,11 @@ $`data frame`$vector
 
 $`data frame`$`data frame`
               V1   V2_new V3 V3_factor V2_int V2_char
-row 1  1.4030114 9.422615  a Amsterdam      9       9
-row 2 -1.4024883 3.546447  a Amsterdam      3       3
-row 3  0.3778380 7.116228  b   Utrecht      7       7
-row 4 -0.8879443 4.002428  b   Utrecht      4       4
-row 5  0.6638642 5.585334  b   Utrecht      5       5</code></pre>
+row 1  0.3754084 5.256960  a Amsterdam      5       5
+row 2 -0.5619464 5.629622  a Amsterdam      5       5
+row 3 -0.3237383 6.658481  b   Utrecht      6       6
+row 4 -0.4082462 2.280533  b   Utrecht      2       2
+row 5 -0.3149997 6.759480  b   Utrecht      6       6</code></pre>
 </div>
 </div>
 </section>
@@ -927,23 +933,21 @@ row 5  0.6638642 5.585334  b   Utrecht      5       5</code></pre>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb87"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a href="#cb87-1" aria-hidden="true" tabindex="-1"></a>d</span>
 <span id="cb87-2"><a href="#cb87-2" aria-hidden="true" tabindex="-1"></a><span class="do">##               V1   V2_new V3 V3_factor V2_int V2_char</span></span>
-<span id="cb87-3"><a href="#cb87-3" aria-hidden="true" tabindex="-1"></a><span class="do">## row 1  1.4030114 9.422615  a Amsterdam      9       9</span></span>
-<span id="cb87-4"><a href="#cb87-4" aria-hidden="true" tabindex="-1"></a><span class="do">## row 2 -1.4024883 3.546447  a Amsterdam      3       3</span></span>
-<span id="cb87-5"><a href="#cb87-5" aria-hidden="true" tabindex="-1"></a><span class="do">## row 3  0.3778380 7.116228  b   Utrecht      7       7</span></span>
-<span id="cb87-6"><a href="#cb87-6" aria-hidden="true" tabindex="-1"></a><span class="do">## row 4 -0.8879443 4.002428  b   Utrecht      4       4</span></span>
-<span id="cb87-7"><a href="#cb87-7" aria-hidden="true" tabindex="-1"></a><span class="do">## row 5  0.6638642 5.585334  b   Utrecht      5       5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb87-3"><a href="#cb87-3" aria-hidden="true" tabindex="-1"></a><span class="do">## row 1  0.3754084 5.256960  a Amsterdam      5       5</span></span>
+<span id="cb87-4"><a href="#cb87-4" aria-hidden="true" tabindex="-1"></a><span class="do">## row 2 -0.5619464 5.629622  a Amsterdam      5       5</span></span>
+<span id="cb87-5"><a href="#cb87-5" aria-hidden="true" tabindex="-1"></a><span class="do">## row 3 -0.3237383 6.658481  b   Utrecht      6       6</span></span>
+<span id="cb87-6"><a href="#cb87-6" aria-hidden="true" tabindex="-1"></a><span class="do">## row 4 -0.4082462 2.280533  b   Utrecht      2       2</span></span>
+<span id="cb87-7"><a href="#cb87-7" aria-hidden="true" tabindex="-1"></a><span class="do">## row 5 -0.3149997 6.759480  b   Utrecht      6       6</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb88"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a href="#cb88-1" aria-hidden="true" tabindex="-1"></a>d<span class="sc">$</span>V1 <span class="sc">&gt;</span> <span class="dv">0</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1]  TRUE FALSE  TRUE FALSE  TRUE</code></pre>
+<pre><code>[1]  TRUE FALSE FALSE FALSE FALSE</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb90"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a href="#cb90-1" aria-hidden="true" tabindex="-1"></a>d[d<span class="sc">$</span>V1 <span class="sc">&gt;</span> <span class="dv">0</span>, ]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>             V1   V2_new V3 V3_factor V2_int V2_char
-row 1 1.4030114 9.422615  a Amsterdam      9       9
-row 3 0.3778380 7.116228  b   Utrecht      7       7
-row 5 0.6638642 5.585334  b   Utrecht      5       5</code></pre>
+<pre><code>             V1  V2_new V3 V3_factor V2_int V2_char
+row 1 0.3754084 5.25696  a Amsterdam      5       5</code></pre>
 </div>
 </div>
 </section>

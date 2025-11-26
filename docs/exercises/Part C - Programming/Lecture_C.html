@@ -155,20 +155,26 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/Part A - Introduction/Practical_A_walkthrough.html" class="sidebar-item-text sidebar-link">
+  <a href="../../exercises/Part A - Introduction/01_code.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Part 1: R code</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/exercise2.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercise 2</span></a>
+  <a href="../../exercises/Part B - Data types and structures/02_data.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 2: Data in R</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../exercises/exercise3.qmd" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Exercise 3</span></a>
+  <a href="../../exercises/Part C - Programming/03_programming.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 3: Programming</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../exercises/Part D - Tidy/04_functions.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Part 4: Functions</span></a>
   </div>
 </li>
     </ul>
@@ -696,11 +702,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>          V1       V2       V3
-1 -0.3580732 1.957517 6.455406
-2  0.0978630 3.705803 6.471995
-3 -0.6494088 5.913687 6.281566
-4  0.4047593 3.884125 4.141361
-5  0.8801787 3.158076 6.887290</code></pre>
+1  0.1942732 1.973239 6.516827
+2  0.2811368 6.166971 7.875672
+3  1.5800117 4.628821 7.291485
+4 -0.1954918 6.903846 5.222193
+5 -0.9969117 7.960118 7.309524</code></pre>
 </div>
 </div>
 </section>
@@ -722,11 +728,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "V1"
-[1] 0.07506379
+[1] 0.1726036
 [1] "V2"
-[1] 3.723841
+[1] 5.526599
 [1] "V3"
-[1] 6.047523</code></pre>
+[1] 6.84314</code></pre>
 </div>
 </div>
 </section>
@@ -740,21 +746,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">print</span>(<span class="fu">sum</span>(row_values<span class="sc">&gt;</span><span class="dv">5</span>))</span>
 <span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>          V1       V2       V3
-1 -0.3580732 1.957517 6.455406
+<pre><code>         V1       V2       V3
+1 0.1942732 1.973239 6.516827
 [1] 1
+         V1       V2       V3
+2 0.2811368 6.166971 7.875672
+[1] 2
         V1       V2       V3
-2 0.097863 3.705803 6.471995
+3 1.580012 4.628821 7.291485
 [1] 1
           V1       V2       V3
-3 -0.6494088 5.913687 6.281566
+4 -0.1954918 6.903846 5.222193
 [1] 2
-         V1       V2       V3
-4 0.4047593 3.884125 4.141361
-[1] 0
-         V1       V2      V3
-5 0.8801787 3.158076 6.88729
-[1] 1</code></pre>
+          V1       V2       V3
+5 -0.9969117 7.960118 7.309524
+[1] 2</code></pre>
 </div>
 </div>
 </section>
@@ -813,19 +819,19 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><code>apply</code> is used for homogeneous matrices/dataframes. It applies a function to each <em>row</em> or <em>column</em>. It returns a vector or a matrix.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df, <span class="dv">1</span>)</span>
-<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="do">##           V1       V2       V3</span></span>
-<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="do">## 1 -0.3580732 1.957517 6.455406</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a><span class="do">##          V1       V2       V3</span></span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a><span class="do">## 1 0.1942732 1.973239 6.516827</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Apply it by row (MARGIN = 1):</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(df, <span class="at">MARGIN =</span> <span class="dv">1</span>, mean)</span>
-<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 2.684950 3.425220 3.848615 2.810082 3.641848</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="do">## [1] 2.894780 4.774593 4.500106 3.976849 4.757577</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Apply it by column (MARGIN = 2):</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(df, <span class="at">MARGIN =</span> <span class="dv">2</span>, mean) <span class="co">#Identical to colMeans(df), which is much faster</span></span>
-<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="do">##         V1         V2         V3 </span></span>
-<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="do">## 0.07506379 3.72384136 6.04752334</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="do">##        V1        V2        V3 </span></span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a><span class="do">## 0.1726036 5.5265990 6.8431400</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="apply-2" class="level2">
@@ -835,11 +841,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="fu">apply</span>(df, <span class="at">MARGIN =</span> <span class="dv">2</span>, sqrt)</span>
 <span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="do">## Warning in FUN(newX[, i], ...): NaNs produced</span></span>
 <span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="do">##             V1       V2       V3</span></span>
-<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a><span class="do">## [1,]       NaN 1.399113 2.540749</span></span>
-<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a><span class="do">## [2,] 0.3128306 1.925046 2.544012</span></span>
-<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a><span class="do">## [3,]       NaN 2.431807 2.506305</span></span>
-<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a><span class="do">## [4,] 0.6362070 1.970818 2.035033</span></span>
-<span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a><span class="do">## [5,] 0.9381784 1.777098 2.624365</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a><span class="do">## [1,] 0.4407643 1.404720 2.552808</span></span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a><span class="do">## [2,] 0.5302234 2.483339 2.806363</span></span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a><span class="do">## [3,] 1.2569851 2.151470 2.700275</span></span>
+<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a><span class="do">## [4,]       NaN 2.627517 2.285212</span></span>
+<span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a><span class="do">## [5,]       NaN 2.821368 2.703613</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="sapply" class="level2 build">
@@ -871,8 +877,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell">
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(df, mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>        V1         V2         V3 
-0.07506379 3.72384136 6.04752334 </code></pre>
+<pre><code>       V1        V2        V3 
+0.1726036 5.5265990 6.8431400 </code></pre>
 </div>
 </div>
 </section>
@@ -954,7 +960,7 @@ $V3
 <span id="cb65-2"><a href="#cb65-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(df, {<span class="cf">function</span>(x) <span class="fu">quantile</span>(x, .<span class="dv">42</span>)})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>    V1.42%     V2.42%     V3.42% 
--0.0480366  3.5305300  6.3997768 </code></pre>
+0.06954839 5.67476292 7.04359410 </code></pre>
 </div>
 </div>
 </section>

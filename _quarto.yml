@@ -16,12 +16,14 @@ website:
         text: "Overview"
       - href: exercises/installation.qmd
         text: "Installation"
-      - href: exercises/Part A - Introduction/Practical_A_walkthrough.qmd
+      - href: exercises/Part A - Introduction/01_code.qmd
         text: "Part 1: R code"
-      - href: exercises/exercise2.qmd
-        text: "Exercise 2"
-      - href: exercises/exercise3.qmd
-        text: "Exercise 3"
+      - href: exercises/Part B - Data types and structures/02_data.qmd
+        text: "Part 2: Data in R"
+      - href: exercises/Part C - Programming/03_programming.qmd
+        text: "Part 3: Programming"
+      - href: exercises/Part D - Tidy/04_functions.qmd
+        text: "Part 4: Functions"
   body-footer: "--- <br><br> Copyright Hanne Oberman, 2025 - [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) <br> Materials developed by [Amices](https://amices.org) team - Methodology & Statistics - Utrecht University"
 
 format:
