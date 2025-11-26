@@ -1,6 +1,14 @@
 ---
 title: "Installation"
-toc: true
+author: 
+ - name: "Gerko Vink"
+ - name: "Javier Garcia-Bernardo"
+ - name: "Hanne Oberman"
+date: "11/20/2025"
+format:
+  html:
+    toc: true
+    number-sections: true
 ---
 
 **System requirements**

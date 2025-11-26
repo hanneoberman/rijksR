@@ -394,11 +394,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>          V1       V2       V3
-1 -0.9177923 4.282280 5.421707
-2  1.5166555 3.764795 7.370028
-3  1.1046054 3.496327 6.302732
-4  0.7570194 5.847598 6.986876
-5  1.4570456 7.467104 6.729935</code></pre>
+1  0.3329395 5.758904 7.424499
+2 -0.2970184 6.928603 5.391975
+3  0.3191144 8.213449 7.094299
+4 -0.2838474 6.257596 6.576176
+5  0.7873579 3.412432 4.998014</code></pre>
 </div>
 </div>
 <div class="cell" data-python.reticulate="false">
@@ -410,7 +410,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="fu">sapply</span>(df, {<span class="cf">function</span>(x) <span class="fu">quantile</span>(x, .<span class="dv">42</span>)})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   V1.42%    V2.42%    V3.42% 
-0.9933779 4.1166846 6.5932299 </code></pre>
+0.1261666 6.0980149 6.1972318 </code></pre>
 </div>
 </div>
 </section>
@@ -1355,7 +1355,7 @@ $reg
 <span id="cb90-4"><a href="#cb90-4" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   user  system elapsed 
-  0.138   0.003   0.141 </code></pre>
+  0.128   0.003   0.130 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb92"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb92-1"><a href="#cb92-1" aria-hidden="true" tabindex="-1"></a>merg[, <span class="fu">c</span>(<span class="st">"reg"</span>, <span class="st">"age.x"</span>,<span class="st">"age.y"</span>)]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -34713,7 +34713,7 @@ $reg
 </div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   user  system elapsed 
-  0.011   0.001   0.012 </code></pre>
+   0.01    0.00    0.01 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb97"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb97-1"><a href="#cb97-1" aria-hidden="true" tabindex="-1"></a><span class="fu">select</span>(merg, reg,age.x,age.y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -35061,7 +35061,7 @@ $reg
 <span id="cb130-3"><a href="#cb130-3" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   user  system elapsed 
- 13.313   2.323  15.223 </code></pre>
+ 13.070   1.265  12.870 </code></pre>
 </div>
 </div>
 <p>Time to query:</p>
@@ -35074,7 +35074,7 @@ $reg
 <span id="cb132-6"><a href="#cb132-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   user  system elapsed 
-  0.271   0.032   0.303 </code></pre>
+  0.255   0.025   0.280 </code></pre>
 </div>
 </div>
 </section>
@@ -35183,7 +35183,7 @@ ORDER BY `number_movies` DESC</code></pre>
 <span id="cb147-15"><a href="#cb147-15" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   user  system elapsed 
-  3.273   0.409   4.891 </code></pre>
+  3.222   0.440   4.473 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb149"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb149-1"><a href="#cb149-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Disconnect</span></span>
 <span id="cb149-2"><a href="#cb149-2" aria-hidden="true" tabindex="-1"></a>DBI<span class="sc">::</span><span class="fu">dbDisconnect</span>(con)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -35209,7 +35209,7 @@ ORDER BY `number_movies` DESC</code></pre>
 <span id="cb150-15"><a href="#cb150-15" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>   user  system elapsed 
-  0.290   0.028   0.385 </code></pre>
+  0.289   0.025   0.380 </code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb152"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb152-1"><a href="#cb152-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Disconnect</span></span>
 <span id="cb152-2"><a href="#cb152-2" aria-hidden="true" tabindex="-1"></a>DBI<span class="sc">::</span><span class="fu">dbDisconnect</span>(con)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
