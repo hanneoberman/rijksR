@@ -14,10 +14,13 @@ output:
     widescreen: true
     transition: 0
   pdf_document: default
-
 ---
 
 
+<!-- TODO: -->
+<!-- - convert to quarto -->
+<!-- - add to website -->
+<!-- - replace img of console etc. -->
 
 ## Goal of this course
 - Gentle introduction to:

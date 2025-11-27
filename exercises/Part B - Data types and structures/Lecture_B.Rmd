@@ -1,7 +1,10 @@
 ---
 title: "Introduction"
-author: "Javier García-Bernardo (based on material by Gerko Vink)"
-date: "Introduction to R and RStudio"
+author: 
+ - name: "Gerko Vink"
+ - name: "Javier Garcia-Bernardo"
+ - name: "Hanne Oberman"
+date: "11/28/2025"
 knit: (function(inputFile, encoding){
   rmarkdown::render(inputFile, output_format = "all") })
 output: 
@@ -11,8 +14,6 @@ output:
     widescreen: true
     transition: 0
   pdf_document: default
-
-
 ---
 
 ## Recap
@@ -27,7 +28,12 @@ We have learned the basics of programming in `R`:
   - vector, matrix, list, data.frame
 - Code is applied on those data types/structures to transform them 
 
-## Quick detour: Naming conventions
+## Overview
+
+- Data types
+- Data structures
+
+## Quick detour: naming conventions
 - You can't have spaces in your variable names.
 ```{r, eval = FALSE}
 student cleaned <- 3
@@ -45,21 +51,17 @@ student_cleaned <- 3 #studentCleaned
 <!-- ![http://journal.r-project.org/archive/2012-2/RJournal_2012-2_Baaaath.pdf](){width=70%} -->
 
 
-# Data Types (Elements)
+# Data Types 
 
-## Data Types
-They are the basis of everything
+Elements
 
-### 1: Character
+## Character
 ```{r}
-
 var_char <- "ab"
 class(var_char)
 ```
 
----
-
-### 2: Numeric
+## Numeric
 ```{r}
 var_num <- 3.2
 class(var_num)
@@ -73,7 +75,7 @@ converted_var <- as.numeric(var_ind)
 class(converted_var)
 ```
 
----
+## Numeric?
 
 ```{r}
 var_inf <- Inf
@@ -83,11 +85,7 @@ var_nan <- NaN
 class(var_nan)
 ```
 
-
-
----
-
-### 3: Logical
+## Logical
 ```{r,collapse=TRUE}
 var_true <- TRUE
 class(var_true)
@@ -103,34 +101,32 @@ They arise when comparing elements
 ```{r,collapse=TRUE}
 a <- 3
 b <- 5
-a == b
-
-a == "3"
-
 a == 3
+a == b
 ```
 
-# Data Structures: Objects that contain more than one element
+# Data Structures
 
----
+Objects that contain more than one element
 
-### Basic data types (elements)
+## Basic data types (elements)
+
 - `character`: "some text"
 - `numeric`: e.g., 2.1
 - `integer`: e.g., 2L
 - `logical`: TRUE/FALSE
 - `factor`: e.g., factor("amsterdam")
 
-### Basic data structures 
+## Basic data structures 
+
 - Consist of data types and functions to transform them
   - `vector`: c(2, 4, 2) 
   - `list`: list(first_col = 1, second = "a", third = TRUE)
   - `matrix`: matrix(c(4, 4, 4, 4), nrow = 2, ncol = 2)
   - `data.frame`: The most important ~ spreadsheet
 
+## Vector
 
-
-## 1: Vector
 - Collection of elements of the __same type__
 - We concatenate the elements using the `c()` function (stands for concatenation)
 ```{r, collapse=TRUE}
@@ -139,6 +135,8 @@ a <- c(1, 2, 3, 4, 5)
 a <- 1:5
 a
 ```
+
+. . . 
 
 Characters (or character strings) in `R` are indicated by the double quote identifier. 
 ```{r, collapse=TRUE}
@@ -164,6 +162,8 @@ If we would want the first to the third (both included)
 a[1:3]
 ```
 
+. . .
+
 Empty means all elements
 ```{r}
 #(In Python is :)
@@ -172,11 +172,15 @@ a[]
 
 
 
-## 2. Matrix: Multiple vectors in one object
+## Matrix
+
+Multiple vectors in one object
 
 ```{r,collapse=TRUE}
 matrix(3, nrow = 5, ncol = 2)
 ```
+
+. . . 
 
 ```{r,collapse=TRUE}
 #We can also create them with vectors, it fills the matrix by column. But be careful!
@@ -185,6 +189,7 @@ c
 ```
 
 ## Retrieving elements in matrices
+
 The first row is retrieved with
 ```{r, collapse=TRUE}
 c[1, ]
@@ -194,6 +199,8 @@ The second column is retrieved with
 ```{r, collapse=TRUE}
 c[, 2]
 ```
+
+. . . 
 
 The intersection of the first row and second column is called by
 ```{r, collapse=TRUE}
@@ -207,6 +214,7 @@ c[1:3, 2]
 
 
 ## Matrices with mixed numeric / character data
+
 If we add a character column to matrix `c`; everything becomes a character:
 ```{r}
 cbind(c, c("a", "b", "c", "d", "e"))
@@ -214,19 +222,22 @@ cbind(c, c("a", "b", "c", "d", "e"))
 
 Remember, matrices and vectors are numerical OR character objects. They can never contain both and still be used for numerical calculations. 
 
-## 3. Data frames
+## Data frame
+
 Data frames can contain both numerical and character elements at the same time, although never in the same column. You can think of them as spreadsheets (with column names, and rows)
 
 ```{r}
-d <- data.frame("V1" = rnorm(5),
-                "V2" = rnorm(5, mean = 5, sd = 2), 
-                "V3" = c("a","a","b","b","b"))
+d <- data.frame(
+  "V1" = rnorm(5),
+  "V2" = rnorm(5, mean = 5, sd = 2),
+  "V3" = c("a", "a", "b", "b", "b")
+)
 d
 ```
 
 We 'filled' a dataframe with two randomly generated sets from the normal distribution - where $V1$ is standard normal and $V2 \sim N(5,2)$ - and a character set. 
 
-## Data frames (continued)
+## Data frame naming
 
 You can name the columns and rows in data frames (just like in matrices)
 ```{r,collapse=TRUE}
@@ -234,6 +245,8 @@ You can name the columns and rows in data frames (just like in matrices)
 row.names(d) <- c("row 1", "row 2", "row 3", "row 4", "row 5")
 d
 ```
+
+. . . 
 
 ```{r,collapse=TRUE}
 #Columns
@@ -259,6 +272,9 @@ d[["V2_new"]]
 d[, "V2_new"] # Careful! In tibbles this returns a one-col tibble
 d[, 2] # Careful! In tibbles this returns a one-col tibble
 ```
+
+. . .
+
 Using it without the comma returns a dataframe
 ```{r,collapse=TRUE}
 d["V2_new"] # and d[2]
@@ -272,25 +288,30 @@ The intersection between row 2 and column 3 can be obtained by
 d[2, 3]
 ```
 
+. . . 
+
 And you can also use ranges
 ```{r}
 d[3:4, 1:2]
 ```
 
 
-## 4. Factor
+## Factor
 - A data type used to encode categorical variables
 - It'll be useful for data modeling and data visualization
 ```{r,collapse=TRUE}
 d$V3_factor <- factor(d$V3, labels = c("Amsterdam","Utrecht"))
 d
 ```
+
+. . .
+
 Class
 ```{r,collapse=TRUE}
 class(d$V3_factor)
 ```
 
-Summary
+Structure
 ```{r,collapse=TRUE}
 str(d$V3_factor)
 ```
@@ -303,13 +324,20 @@ d$V2_int <- as.integer(d$V2_new)
 d
 ```
 
+. . . 
+
 ```{r}
 d$V2_char <- as.character(d$V2_int)
 d
 ```
 
-## 5. List: Mixed type
-You can have a list of everything mixed with everything. 
+## List 
+
+- Mixed type
+- You can have a list of everything mixed with everything. 
+
+. . . 
+
 For example, an simple list can be created by
 ```{r}
 a <- 1:5 #a vector
@@ -317,12 +345,17 @@ f <- list(a) #convert to a list
 f
 ```
 
+
+## Using list elements
+
 Elements or objects within lists can be called by using double square brackets [[]]. For example, the first (and only) element in list `f` is object `a`
 ```{r}
 f[[1]]
 ```
 
-## Lists (continued)
+
+## Editing lists
+
 We can simply add an object or element to an existing list
 ```{r}
 f[[2]] <- d
@@ -330,14 +363,15 @@ f
 ```
 to obtain a list with a vector and a data frame. 
 
-## Lists (continued)
+## List naming
 We can add names to the list as follows
 ```{r}
 names(f) <- c("vector", "data frame")
 f
 ```
 
-## Lists (continued)
+## Named list
+
 We can also create it as 
 ```{r}
 f <- list("vector" = 1:5, 
@@ -361,32 +395,41 @@ g
 ```
 
 
-To call the vector from the second list within the list g, use the following code
+To call the vector from the second list within the list `g`, use the following code
 ```{r}
 g[[2]][[1]] #Also g[[2]]$vector
-
 ```
 
 # Filtering by condition
 
 ## Logical operators
-- Logical operators are signs that evaluate a statement, such as `==` (equal),  `!=` (different), `<` (lower), `>` (greater), `<=` (lower or equal), `>=` (greater or equal), and `|` (OR) as well as `&` (AND). 
+- Logical operators are signs that evaluate a statement
+    - `==` (equal),  
+    - `!=` (different),
+    - `<` (lower), 
+    - `>` (greater), 
+    - `<=` (lower or equal), 
+    - `>=` (greater or equal), and
+    - `|` (OR) as well as `&` (AND). 
 
-- For example, if we would like elements out of example vector below that are larger than 3, we would type:
+## Filtering a vector
+If we would like elements out of example vector below that are larger than 3, we would type:
 ```{r, collapse=TRUE}
 example_vector <- c(1,2,3,4,5,6,7,8,9)
 example_vector[example_vector>3]
-
 ```
 
-#### Why does this work?
+Why does this work?
+
+. . . 
+
 It filters the vector, keeping the elements where the condition is TRUE
 ```{r, collapse=TRUE}
 example_vector > 3
 ```
 
 
-## Logical operators (cont'd)
+## Filtering a vector
 If we would like the elements that are smaller than 3 OR larger than 3, we could type.
 ```{r}
 example_vector[(example_vector < 3) | (example_vector > 3)] #c smaller than 3 or larger than 3
@@ -397,13 +440,14 @@ example_vector[example_vector != 3] #c not equal to 3
 ```
 
 
-## Logical operators (cont'd)
+## Filtering a vector
 You can use `%in` to select specific elements
 ```{r}
 example_vector %in% c(1,5)
 example_vector[example_vector %in% c(1,5)]
 ```
 
+. . . 
 
 Typing `!` before a logical operator takes the complement of that action (the opposite) 
 ```{r}
@@ -411,8 +455,9 @@ Typing `!` before a logical operator takes the complement of that action (the op
 ```
 
 
-## Logical operators (cont'd)
-They are extremely useful in dataframes
+## Filtering a vector
+
+They are extremely useful in data frames
 
 ```{r,collapse=TRUE}
 d
@@ -434,12 +479,15 @@ d[d$V1 > 0, ]
 mean(c(1,2,3,4,5))
 ```
 
+. . . 
+
 - You can save the output with a name
 ```{r,collapse=TRUE}
 mean_v <- mean(c(1,2,3,4,5))
 mean_v
 ```
 
+## Function from a package
 
 - When they come from a package, you can call them in two ways
 ```{r, eval = FALSE, echo = TRUE}
@@ -450,7 +498,7 @@ dplyr::n_distinct(c(1,2,2,3,3))
 ```
 
 
-## Function's arguments
+## Function arguments
 - Functions typically have arguments (i.e., things that the function need to work). 
 - Usually at least one is required. e.g., in the mean example you need to pass a vector of numbers.
 - Other arguments tell the function how it should handle the input. In the example below it tells the mean function to remove missing values.
@@ -459,6 +507,7 @@ mean(c(1,2,3,4,5,NA))
 mean(c(1,2,3,4,5,NA), na.rm = TRUE)
 ```
 
+. . . 
 
 - You can create your own (more on this later)
 ```{r,collapse=TRUE}
@@ -480,7 +529,9 @@ my_mean(c(1,2,3,4,5))
 0 / 0
 ```
 
-- Also impossible are calculations based on missing values (NA's)
+. . . 
+
+- Also impossible are calculations based on missing values (NAs)
 ```{r,collapse=TRUE}
 mean(c(1, 2, NA, 4, 5))
 ```
@@ -508,6 +559,7 @@ dplyr::near((3 - 2.9), 0.1)
 ```
 
 # Applications
+
 ## Reading a CSV file and descriptive statistics
 That was dry, but let's see some potential, reading a CSV file and calculating some descriptive statistics.
 
@@ -536,13 +588,13 @@ df <- readr::read_delim("../common_datasets/dataset_boys.csv", delim = ",")
 str(df)
 ```
 
----
+## Calculate some descriptive statistics
 
 ```{r}
 summary(df)
 ```
 
----
+## Calculate some descriptive statistics
 
 ```{r}
 library(Hmisc)
@@ -579,8 +631,3 @@ If this does not work out --> show the code.
 In any case; ask for help when you feel help is needed.
 
 - Do not 'struggle' for too long: we only have limited time!
-
-
-
-
-
