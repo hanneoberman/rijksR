@@ -6,6 +6,11 @@ date: "Nov 28 2025"
 
 This course covers a gentle introduction to `R` and `RStudio`, focusing on learning the basics *well*. 
 
+## Course website
+
+![](QR.png)
+[hanneoberman.github.io/rijksR](https://hanneoberman.github.io/rijksR)
+
 ## Schedule 
 
 | Start  |  End    | What?      |
@@ -66,3 +71,11 @@ This course is broken into the following four parts.
 - [Part 3: Programming](exercises/Part C - Programming/03_programming.qmd)
 - [Part 4: Functions](exercises/Part D - Tidy/04_functions.qmd)
 
+### Slides
+
+For each of the four parts, the lecture slides are available as follows.
+
+- [Slides part 1: R code](exercises/Part A - Introduction/slides_code.qmd)
+- [Slides part 2: Data in R](exercises/Part B - Data types and structures/slides_data.qmd)
+- [Slides part 3: Programming](exercises/Part C - Programming/slides_programming.qmd)
+- [Slides part 4: Functions](exercises/Part D - Tidy/slides_functions.qmd)
