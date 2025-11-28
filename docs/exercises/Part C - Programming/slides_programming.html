@@ -1484,11 +1484,11 @@ Hanne Oberman
 <span id="cb34-5"><a></a><span class="fu">head</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>          V1       V2       V3
-1 -0.4667243 7.478040 6.204626
-2 -0.3555370 6.405324 5.233755
-3  0.4610819 5.514799 5.784466
-4 -0.9040166 4.552787 6.035429
-5  1.1134518 2.540990 6.760322</code></pre>
+1  1.5664746 6.789507 5.431546
+2  0.4486138 9.466911 5.053741
+3 -0.8016699 4.835905 6.771744
+4  0.4592285 3.240955 5.340649
+5 -1.4383457 5.224832 6.562874</code></pre>
 </div>
 </div>
 </section>
@@ -1510,11 +1510,11 @@ Hanne Oberman
 <span id="cb38-4"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] &quot;V1&quot;
-[1] -0.03034882
+[1] 0.04686025
 [1] &quot;V2&quot;
-[1] 5.298388
+[1] 5.911622
 [1] &quot;V3&quot;
-[1] 6.003719</code></pre>
+[1] 5.832111</code></pre>
 </div>
 </div>
 </section>
@@ -1528,21 +1528,21 @@ Hanne Oberman
 <span id="cb40-4"><a></a>  <span class="fu">print</span>(<span class="fu">sum</span>(row_values<span class="sc">&gt;</span><span class="dv">5</span>))</span>
 <span id="cb40-5"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>          V1      V2       V3
-1 -0.4667243 7.47804 6.204626
+<pre><code>        V1       V2       V3
+1 1.566475 6.789507 5.431546
 [1] 2
          V1       V2       V3
-2 -0.355537 6.405324 5.233755
-[1] 2
-         V1       V2       V3
-3 0.4610819 5.514799 5.784466
+2 0.4486138 9.466911 5.053741
 [1] 2
           V1       V2       V3
-4 -0.9040166 4.552787 6.035429
+3 -0.8016699 4.835905 6.771744
 [1] 1
-        V1      V2       V3
-5 1.113452 2.54099 6.760322
-[1] 1</code></pre>
+         V1       V2       V3
+4 0.4592285 3.240955 5.340649
+[1] 1
+         V1       V2       V3
+5 -1.438346 5.224832 6.562874
+[1] 2</code></pre>
 </div>
 </div>
 </section>
@@ -1603,19 +1603,19 @@ Hanne Oberman
 <p><code>apply</code> is used for homogeneous matrices/dataframes. It applies a function to each <em>row</em> or <em>column</em>. It returns a vector or a matrix.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a></a><span class="fu">head</span>(df, <span class="dv">1</span>)</span>
-<span id="cb46-2"><a></a><span class="do">##           V1      V2       V3</span></span>
-<span id="cb46-3"><a></a><span class="do">## 1 -0.4667243 7.47804 6.204626</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb46-2"><a></a><span class="do">##         V1       V2       V3</span></span>
+<span id="cb46-3"><a></a><span class="do">## 1 1.566475 6.789507 5.431546</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Apply it by row (MARGIN = 1):</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a></a><span class="fu">apply</span>(df, <span class="at">MARGIN =</span> <span class="dv">1</span>, mean)</span>
-<span id="cb47-2"><a></a><span class="do">## [1] 4.405314 3.761180 3.920116 3.228066 3.471588</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb47-2"><a></a><span class="do">## [1] 4.595843 4.989756 3.601993 3.013611 3.449787</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Apply it by column (MARGIN = 2):</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a></a><span class="fu">apply</span>(df, <span class="at">MARGIN =</span> <span class="dv">2</span>, mean) <span class="co">#Identical to colMeans(df), which is much faster</span></span>
-<span id="cb48-2"><a></a><span class="do">##          V1          V2          V3 </span></span>
-<span id="cb48-3"><a></a><span class="do">## -0.03034882  5.29838797  6.00371950</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb48-2"><a></a><span class="do">##         V1         V2         V3 </span></span>
+<span id="cb48-3"><a></a><span class="do">## 0.04686025 5.91162220 5.83211108</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="apply-2" class="slide level2">
@@ -1624,11 +1624,11 @@ Hanne Oberman
 <div class="cell">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a></a><span class="fu">apply</span>(df, <span class="at">MARGIN =</span> <span class="dv">2</span>, sqrt)</span>
 <span id="cb49-2"><a></a><span class="do">##             V1       V2       V3</span></span>
-<span id="cb49-3"><a></a><span class="do">## [1,]       NaN 2.734601 2.490909</span></span>
-<span id="cb49-4"><a></a><span class="do">## [2,]       NaN 2.530874 2.287740</span></span>
-<span id="cb49-5"><a></a><span class="do">## [3,] 0.6790302 2.348361 2.405092</span></span>
-<span id="cb49-6"><a></a><span class="do">## [4,]       NaN 2.133726 2.456711</span></span>
-<span id="cb49-7"><a></a><span class="do">## [5,] 1.0552023 1.594048 2.600062</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb49-3"><a></a><span class="do">## [1,] 1.2515888 2.605668 2.330568</span></span>
+<span id="cb49-4"><a></a><span class="do">## [2,] 0.6697864 3.076835 2.248053</span></span>
+<span id="cb49-5"><a></a><span class="do">## [3,]       NaN 2.199069 2.602258</span></span>
+<span id="cb49-6"><a></a><span class="do">## [4,] 0.6776640 1.800265 2.310984</span></span>
+<span id="cb49-7"><a></a><span class="do">## [5,]       NaN 2.285789 2.561811</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="sapply" class="slide level2 build">
@@ -1660,8 +1660,8 @@ Hanne Oberman
 <div class="cell">
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a></a><span class="fu">sapply</span>(df, mean)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>         V1          V2          V3 
--0.03034882  5.29838797  6.00371950 </code></pre>
+<pre><code>        V1         V2         V3 
+0.04686025 5.91162220 5.83211108 </code></pre>
 </div>
 </div>
 </section>
@@ -1745,7 +1745,7 @@ $V3
 <span id="cb65-2"><a></a><span class="fu">sapply</span>(df, {<span class="cf">function</span>(x) <span class="fu">quantile</span>(x, .<span class="dv">42</span>)})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>    V1.42%     V2.42%     V3.42% 
--0.3911169  5.2069553  5.9551206 </code></pre>
+0.04852302 5.10037541 5.40245940 </code></pre>
 </div>
 </div>
 </section>

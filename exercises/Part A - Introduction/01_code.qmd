@@ -151,7 +151,7 @@ Quarto is just one 'flavor' of markdown, which allows different programming lang
 
 11. **Open the file `quarto.qmd`. **
 
-You can find the notebook [`quarto.qmd` here](exercise_examples/quarto.qmd){target="_blank"}.
+You can find the notebook [`quarto.qmd` here](https://javier.science/R/Contents/Material/Part%20A%20-%20Introduction/exercise_examples/quarto.qmd){target="_blank"}.
 
 Have a look at the code in the `quarto.qmd` file and make sure that you understand what is going on. If you do not understand what you are looking at, please ask.
 
