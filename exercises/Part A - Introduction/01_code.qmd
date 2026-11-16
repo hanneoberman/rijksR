@@ -101,9 +101,13 @@ Your document is now saved. We saved it in a separate folder so that we are able
 
 6. **Create a project by clicking on ![alt text](figuresPractical/fig5.png) in the top-right corner of `RStudio`**
 
+::: {.callout-note}
+If you use Posit Cloud, you have already created an R Project as part of the installation set-up. To verify, see the 'Files' panel.
+:::
+
 Select `New Project`, click `Existing Directory` and navigate to the folder where you have just saved your code. When all is done, click on `Create Project`
 
-You will notice in the files pane that a file `Practicals.RProj` has been created
+You will notice in the files panel that a file `Practicals.RProj` has been created
 
 ![](figuresPractical/fig6.png)
 
@@ -114,6 +118,10 @@ The possibility to categorize your work in projects is one of the benefits of us
 7. **Open the `R`-script `notebook.R`. **
 
 You can find [`notebook.R` here](https://javier.science/R/Contents/Material/Part%20A%20-%20Introduction/exercise_examples/notebook.R){target="_blank"}.
+
+::: {.callout-note}
+If you use Posit Cloud, use the 'Upload' button (in the 'Files' panel) to add the R script to the project.
+:::
 
 ---
 

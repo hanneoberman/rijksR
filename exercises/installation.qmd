@@ -120,6 +120,11 @@ __2. Select "Cloud free" by clicking "Learn more" and sign up.__
 
 __3. Go to [https://docs.posit.co/cloud/get_started/](https://docs.posit.co/cloud/get_started/) and follow the instructions up to and including "Create a Project"__
 
+::: {.callout-note}
+Under 'New Project', select 'New RStudio Project'
+![](img/new_rstudio_project.png)
+:::
+
 __4. Open a fresh `R`-file: "File --> New file --> R script"__
 
 ![](img/positcloud-newfile.png){width="70%"}
