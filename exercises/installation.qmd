@@ -20,9 +20,12 @@ We will explore programming and compiling in this tutorial, so you will
 need full access to your machine. Some corporate computers (and university 
 computers) restrict the access of their users. I therefore advise you to use a 
 personal computer for this course, if possible. 
-Or to access R online via Posit Cloud (see @sec-cloud below).
+Alternatively, access R online via Posit Cloud (see the 'Online version of R' tab below).
 
-## Local version of R 
+::: {.panel-tabset}
+
+
+## Local version of R {#sec-local}
 
 If you are already using a local version of R, you can skip ahead to @sec-existing.
 
@@ -94,9 +97,11 @@ Missing packages can be installed as follows:
 install.packages(c("quarto", "knitr", "dplyr", "mice"))
 ```
 
-## Online version of R  {#sec-cloud}
+## Online version of R {#sec-cloud}
 
-**1. Choose an online server to run R** 
+### Posit Cloud set-up {#sec-positcloud}
+
+**0. Choose an online server to run R** 
 
 If the suggested steps fail or you have insufficient rights on your machine, you 
 can use the following web-based solutions. 
@@ -122,12 +127,14 @@ __3. Go to [https://docs.posit.co/cloud/get_started/](https://docs.posit.co/clou
 
 ::: {.callout-note}
 Under 'New Project', select 'New RStudio Project'
-![](img/new_rstudio_project.png)
+![](img/new_rstudio_project.png){width=200}
 :::
 
 __4. Open a fresh `R`-file: "File --> New file --> R script"__
 
 ![](img/positcloud-newfile.png){width="70%"}
+
+:::
 
 ---
 

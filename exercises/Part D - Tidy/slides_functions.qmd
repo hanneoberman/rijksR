@@ -1017,13 +1017,13 @@ values_to = "value", values_drop_na = FALSE)
 Their data on movies and actors is freely available at https://developer.imdb.com/non-commercial-datasets/
 
 
-```{r eval=FALSE}
+```{r eval=FALSE, cache=FALSE}
 #Download data
 download.file("https://datasets.imdbws.com/title.basics.tsv.gz", "db/title_basics.tsv.gz", mode = "wb")
 ```
 
 
-```{r warning = FALSE}
+```{r warning = FALSE, cache=FALSE}
 data_imdb <- readr::read_delim("db/title_basics.tsv.gz", delim = "\t", na = "\\N", show_col_types = FALSE)
 
 #10,375,265 rows, 9 columns
@@ -1035,7 +1035,7 @@ data_imdb
 
 
 Time to read data:
-```{r warning=FALSE}
+```{r warning=FALSE, cache=FALSE}
 system.time(
   data_imdb <- readr::read_delim("db/title_basics.tsv.gz", delim = "\t", na = "\\N", show_col_types = FALSE)
 )
@@ -1068,7 +1068,7 @@ library(dbplyr) #query without using SQL
 
 SQLite is a lightweight, self-contained, and serverless relational database management system (RDBMS). It's contained as a file in your computer. It's designed for simplicity and efficiency.
 
-```{r}
+```{r, cache=FALSE}
 # Connect to SQLite database
 db <- DBI::dbConnect(RSQLite::SQLite(), "db/imdb.db") #try :memory: instead of a file
 # Write the data frame to the SQLite database using dbplyr
@@ -1083,19 +1083,19 @@ DBI::dbDisconnect(db)
 ## Some operations on the table
 
 Reading the tables
-```{r}
+```{r, cache=FALSE}
 db <- DBI::dbConnect(RSQLite::SQLite(), "db/imdb.db") #try :memory: instead of a file
 DBI::dbListTables(db)
 ```
 
 Reading the fields of a table
-```{r}
+```{r, cache=FALSE}
 DBI::dbListFields(db, "title_basics")
 ```
 
 
 ## Running query
-```{r}
+```{r, cache=FALSE}
 # Connect to the table
 con <- DBI::dbConnect(RSQLite::SQLite(), "db/imdb.db")
 data_imdb_db <- dplyr::tbl(con, "title_basics")
