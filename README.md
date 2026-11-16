@@ -6,7 +6,7 @@ Materials developed by Gerko Vink and Javier García-Bernardo.
 
 ## Requirements
 
-R, Rstudio, R packages (e.g., `tidyverse`, `writexl`, `Hmisc`, `datasauRus`)
+R, Rstudio, R packages (e.g., `tidyverse`, `writexl`, `Hmisc`, `datasauRus`, `RSQLite`)
 
 This course was last rendered on 2026-11-16 with `sessionInfo()`
 
