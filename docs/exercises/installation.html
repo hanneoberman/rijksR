@@ -189,19 +189,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#local-version-of-r" id="toc-local-version-of-r" class="nav-link active" data-scroll-target="#local-version-of-r"><span class="header-section-number">1</span> Local version of R</a>
-  <ul class="collapse">
-  <li><a href="#sec-fresh" id="toc-sec-fresh" class="nav-link" data-scroll-target="#sec-fresh"><span class="header-section-number">1.1</span> Fresh installation</a></li>
-  <li><a href="#sec-existing" id="toc-sec-existing" class="nav-link" data-scroll-target="#sec-existing"><span class="header-section-number">1.2</span> Existing installation</a></li>
-  </ul></li>
-  <li><a href="#sec-cloud" id="toc-sec-cloud" class="nav-link" data-scroll-target="#sec-cloud"><span class="header-section-number">2</span> Online version of R</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -241,12 +230,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p><strong>System requirements</strong></p>
 <p>You will either need a computer for which you have full write access and administrator rights, or run the code via an online server.</p>
-<p>We will explore programming and compiling in this tutorial, so you will need full access to your machine. Some corporate computers (and university computers) restrict the access of their users. I therefore advise you to use a personal computer for this course, if possible. Or to access R online via Posit Cloud (see <a href="#sec-cloud" class="quarto-xref">Section&nbsp;2</a> below).</p>
-<section id="local-version-of-r" class="level2" data-number="1">
-<h2 data-number="1" class="anchored" data-anchor-id="local-version-of-r"><span class="header-section-number">1</span> Local version of R</h2>
-<p>If you are already using a local version of R, you can skip ahead to <a href="#sec-existing" class="quarto-xref">Section&nbsp;1.2</a>.</p>
-<section id="sec-fresh" class="level3" data-number="1.1">
-<h3 data-number="1.1" class="anchored" data-anchor-id="sec-fresh"><span class="header-section-number">1.1</span> Fresh installation</h3>
+<p>We will explore programming and compiling in this tutorial, so you will need full access to your machine. Some corporate computers (and university computers) restrict the access of their users. I therefore advise you to use a personal computer for this course, if possible. Alternatively, access R online via Posit Cloud (see the ‘Online version of R’ tab below).</p>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" href="">Local version of R</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false" href="">Online version of R</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>If you are already using a local version of R, you can skip ahead to <a href="#sec-existing" class="quarto-xref">Section&nbsp;0.2</a>.</p>
+<section id="sec-fresh" class="level3" data-number="0.1">
+<h3 data-number="0.1" class="anchored" data-anchor-id="sec-fresh"><span class="header-section-number">0.1</span> Fresh installation</h3>
 <p><strong>1. Install R</strong></p>
 <p>You can obtain a copy of R <a href="https://cran.r-project.org">here</a>. We won’t use R directly in this course. Rather, we’ll call R through RStudio. Therefore, you also need to install RStudio.</p>
 <p><strong>2. Install RStudio Desktop</strong></p>
@@ -271,8 +262,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 compilation? (Yes/no/cancel)</code></pre>
 <p>Type <code>Yes</code> in the console, and press the “Enter/Return” key (or click the corresponding button if the question presents as a dialog box).</p>
 </section>
-<section id="sec-existing" class="level3" data-number="1.2">
-<h3 data-number="1.2" class="anchored" data-anchor-id="sec-existing"><span class="header-section-number">1.2</span> Existing installation</h3>
+<section id="sec-existing" class="level3" data-number="0.2">
+<h3 data-number="0.2" class="anchored" data-anchor-id="sec-existing"><span class="header-section-number">0.2</span> Existing installation</h3>
 <p><strong>1. Check R version (you will need version 4.1 or higher)</strong></p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>R.version<span class="sc">$</span>version.string</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
@@ -293,10 +284,11 @@ compilation? (Yes/no/cancel)</code></pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="fu">c</span>(<span class="st">"quarto"</span>, <span class="st">"knitr"</span>, <span class="st">"dplyr"</span>, <span class="st">"mice"</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
-</section>
-<section id="sec-cloud" class="level2" data-number="2">
-<h2 data-number="2" class="anchored" data-anchor-id="sec-cloud"><span class="header-section-number">2</span> Online version of R</h2>
-<p><strong>1. Choose an online server to run R</strong></p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<section id="sec-positcloud" class="level3" data-number="0.3">
+<h3 data-number="0.3" class="anchored" data-anchor-id="sec-positcloud"><span class="header-section-number">0.3</span> Posit Cloud set-up</h3>
+<p><strong>0. Choose an online server to run R</strong></p>
 <p>If the suggested steps fail or you have insufficient rights on your machine, you can use the following web-based solutions.</p>
 <ol type="1">
 <li>Open a free account on <a href="https://posit.cloud">posit.cloud</a>.
@@ -324,16 +316,19 @@ Note
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>Under ‘New Project’, select ‘New RStudio Project’ <img src="img/new_rstudio_project.png" class="img-fluid"></p>
+<p>Under ‘New Project’, select ‘New RStudio Project’ <img src="img/new_rstudio_project.png" class="img-fluid" width="200"></p>
 </div>
 </div>
 <p><strong>4. Open a fresh <code>R</code>-file: “File –&gt; New file –&gt; R script”</strong></p>
 <p><img src="img/positcloud-newfile.png" class="img-fluid" style="width:70.0%"></p>
+</section>
+</div>
+</div>
+</div>
 <hr>
 <p>End of Exercise 0</p>
 
 
-</section>
 
 <p>— <br><br> Copyright Hanne Oberman, 2025 - <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a> <br> Materials developed by <a href="https://amices.org">Amices</a> team - Methodology &amp; Statistics - Utrecht University</p></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

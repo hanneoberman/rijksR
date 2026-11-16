@@ -1360,12 +1360,12 @@ Hanne Oberman
 <span id="cb34-5"><a></a>)</span>
 <span id="cb34-6"><a></a>d</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>           V1       V2 V3
-1 -0.96321159 6.593861  a
-2 -0.13279578 3.434315  a
-3 -1.63140062 5.227317  b
-4  0.08006072 6.669182  b
-5  1.79539114 4.763027  b</code></pre>
+<pre><code>            V1        V2 V3
+1  0.421386834 0.8741231  a
+2 -0.601229790 4.8939845  a
+3  0.006284239 4.2926491  b
+4 -0.219629323 6.1049436  b
+5  0.055148964 4.5848623  b</code></pre>
 </div>
 </div>
 <p>We ‘filled’ a dataframe with two randomly generated sets from the normal distribution - where <span class="math inline">\(V1\)</span> is standard normal and <span class="math inline">\(V2 \sim N(5,2)\)</span> - and a character set.</p>
@@ -1377,24 +1377,24 @@ Hanne Oberman
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a><span class="co">#Rows</span></span>
 <span id="cb36-2"><a></a><span class="fu">row.names</span>(d) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;row 1&quot;</span>, <span class="st">&quot;row 2&quot;</span>, <span class="st">&quot;row 3&quot;</span>, <span class="st">&quot;row 4&quot;</span>, <span class="st">&quot;row 5&quot;</span>)</span>
 <span id="cb36-3"><a></a>d</span>
-<span id="cb36-4"><a></a><span class="do">##                V1       V2 V3</span></span>
-<span id="cb36-5"><a></a><span class="do">## row 1 -0.96321159 6.593861  a</span></span>
-<span id="cb36-6"><a></a><span class="do">## row 2 -0.13279578 3.434315  a</span></span>
-<span id="cb36-7"><a></a><span class="do">## row 3 -1.63140062 5.227317  b</span></span>
-<span id="cb36-8"><a></a><span class="do">## row 4  0.08006072 6.669182  b</span></span>
-<span id="cb36-9"><a></a><span class="do">## row 5  1.79539114 4.763027  b</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb36-4"><a></a><span class="do">##                 V1        V2 V3</span></span>
+<span id="cb36-5"><a></a><span class="do">## row 1  0.421386834 0.8741231  a</span></span>
+<span id="cb36-6"><a></a><span class="do">## row 2 -0.601229790 4.8939845  a</span></span>
+<span id="cb36-7"><a></a><span class="do">## row 3  0.006284239 4.2926491  b</span></span>
+<span id="cb36-8"><a></a><span class="do">## row 4 -0.219629323 6.1049436  b</span></span>
+<span id="cb36-9"><a></a><span class="do">## row 5  0.055148964 4.5848623  b</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a><span class="co">#Columns</span></span>
 <span id="cb37-2"><a></a><span class="fu">names</span>(d) <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">&quot;V1&quot;</span>, <span class="st">&quot;V2_new&quot;</span>, <span class="st">&quot;V3&quot;</span>)</span>
 <span id="cb37-3"><a></a>d</span>
-<span id="cb37-4"><a></a><span class="do">##                V1   V2_new V3</span></span>
-<span id="cb37-5"><a></a><span class="do">## row 1 -0.96321159 6.593861  a</span></span>
-<span id="cb37-6"><a></a><span class="do">## row 2 -0.13279578 3.434315  a</span></span>
-<span id="cb37-7"><a></a><span class="do">## row 3 -1.63140062 5.227317  b</span></span>
-<span id="cb37-8"><a></a><span class="do">## row 4  0.08006072 6.669182  b</span></span>
-<span id="cb37-9"><a></a><span class="do">## row 5  1.79539114 4.763027  b</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb37-4"><a></a><span class="do">##                 V1    V2_new V3</span></span>
+<span id="cb37-5"><a></a><span class="do">## row 1  0.421386834 0.8741231  a</span></span>
+<span id="cb37-6"><a></a><span class="do">## row 2 -0.601229790 4.8939845  a</span></span>
+<span id="cb37-7"><a></a><span class="do">## row 3  0.006284239 4.2926491  b</span></span>
+<span id="cb37-8"><a></a><span class="do">## row 4 -0.219629323 6.1049436  b</span></span>
+<span id="cb37-9"><a></a><span class="do">## row 5  0.055148964 4.5848623  b</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </section>
@@ -1404,13 +1404,13 @@ Hanne Oberman
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a>d[<span class="st">&quot;row 3&quot;</span>, ]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>             V1   V2_new V3
-row 3 -1.631401 5.227317  b</code></pre>
+<pre><code>               V1   V2_new V3
+row 3 0.006284239 4.292649  b</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a>d[<span class="dv">3</span>, ]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>             V1   V2_new V3
-row 3 -1.631401 5.227317  b</code></pre>
+<pre><code>               V1   V2_new V3
+row 3 0.006284239 4.292649  b</code></pre>
 </div>
 </div>
 <p>CAREFUL! You always need the comma (,) when filtering by rows. Otherwise you filter by column!</p>
@@ -1420,24 +1420,24 @@ row 3 -1.631401 5.227317  b</code></pre>
 <p>All</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a>d<span class="sc">$</span>V2_new</span>
-<span id="cb42-2"><a></a><span class="do">## [1] 6.593861 3.434315 5.227317 6.669182 4.763027</span></span>
+<span id="cb42-2"><a></a><span class="do">## [1] 0.8741231 4.8939845 4.2926491 6.1049436 4.5848623</span></span>
 <span id="cb42-3"><a></a>d[[<span class="st">&quot;V2_new&quot;</span>]]</span>
-<span id="cb42-4"><a></a><span class="do">## [1] 6.593861 3.434315 5.227317 6.669182 4.763027</span></span>
+<span id="cb42-4"><a></a><span class="do">## [1] 0.8741231 4.8939845 4.2926491 6.1049436 4.5848623</span></span>
 <span id="cb42-5"><a></a>d[, <span class="st">&quot;V2_new&quot;</span>] <span class="co"># Careful! In tibbles this returns a one-col tibble</span></span>
-<span id="cb42-6"><a></a><span class="do">## [1] 6.593861 3.434315 5.227317 6.669182 4.763027</span></span>
+<span id="cb42-6"><a></a><span class="do">## [1] 0.8741231 4.8939845 4.2926491 6.1049436 4.5848623</span></span>
 <span id="cb42-7"><a></a>d[, <span class="dv">2</span>] <span class="co"># Careful! In tibbles this returns a one-col tibble</span></span>
-<span id="cb42-8"><a></a><span class="do">## [1] 6.593861 3.434315 5.227317 6.669182 4.763027</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb42-8"><a></a><span class="do">## [1] 0.8741231 4.8939845 4.2926491 6.1049436 4.5848623</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment">
 <p>Using it without the comma returns a dataframe</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a>d[<span class="st">&quot;V2_new&quot;</span>] <span class="co"># and d[2]</span></span>
-<span id="cb43-2"><a></a><span class="do">##         V2_new</span></span>
-<span id="cb43-3"><a></a><span class="do">## row 1 6.593861</span></span>
-<span id="cb43-4"><a></a><span class="do">## row 2 3.434315</span></span>
-<span id="cb43-5"><a></a><span class="do">## row 3 5.227317</span></span>
-<span id="cb43-6"><a></a><span class="do">## row 4 6.669182</span></span>
-<span id="cb43-7"><a></a><span class="do">## row 5 4.763027</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb43-2"><a></a><span class="do">##          V2_new</span></span>
+<span id="cb43-3"><a></a><span class="do">## row 1 0.8741231</span></span>
+<span id="cb43-4"><a></a><span class="do">## row 2 4.8939845</span></span>
+<span id="cb43-5"><a></a><span class="do">## row 3 4.2926491</span></span>
+<span id="cb43-6"><a></a><span class="do">## row 4 6.1049436</span></span>
+<span id="cb43-7"><a></a><span class="do">## row 5 4.5848623</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </div>
 </section>
@@ -1455,9 +1455,9 @@ row 3 -1.631401 5.227317  b</code></pre>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a></a>d[<span class="dv">3</span><span class="sc">:</span><span class="dv">4</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>               V1   V2_new
-row 3 -1.63140062 5.227317
-row 4  0.08006072 6.669182</code></pre>
+<pre><code>                V1   V2_new
+row 3  0.006284239 4.292649
+row 4 -0.219629323 6.104944</code></pre>
 </div>
 </div>
 </div>
@@ -1471,12 +1471,12 @@ row 4  0.08006072 6.669182</code></pre>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a></a>d<span class="sc">$</span>V3_factor <span class="ot">&lt;-</span> <span class="fu">factor</span>(d<span class="sc">$</span>V3, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">&quot;Amsterdam&quot;</span>,<span class="st">&quot;Utrecht&quot;</span>))</span>
 <span id="cb48-2"><a></a>d</span>
-<span id="cb48-3"><a></a><span class="do">##                V1   V2_new V3 V3_factor</span></span>
-<span id="cb48-4"><a></a><span class="do">## row 1 -0.96321159 6.593861  a Amsterdam</span></span>
-<span id="cb48-5"><a></a><span class="do">## row 2 -0.13279578 3.434315  a Amsterdam</span></span>
-<span id="cb48-6"><a></a><span class="do">## row 3 -1.63140062 5.227317  b   Utrecht</span></span>
-<span id="cb48-7"><a></a><span class="do">## row 4  0.08006072 6.669182  b   Utrecht</span></span>
-<span id="cb48-8"><a></a><span class="do">## row 5  1.79539114 4.763027  b   Utrecht</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb48-3"><a></a><span class="do">##                 V1    V2_new V3 V3_factor</span></span>
+<span id="cb48-4"><a></a><span class="do">## row 1  0.421386834 0.8741231  a Amsterdam</span></span>
+<span id="cb48-5"><a></a><span class="do">## row 2 -0.601229790 4.8939845  a Amsterdam</span></span>
+<span id="cb48-6"><a></a><span class="do">## row 3  0.006284239 4.2926491  b   Utrecht</span></span>
+<span id="cb48-7"><a></a><span class="do">## row 4 -0.219629323 6.1049436  b   Utrecht</span></span>
+<span id="cb48-8"><a></a><span class="do">## row 5  0.055148964 4.5848623  b   Utrecht</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="fragment">
 <p>Class</p>
@@ -1498,12 +1498,12 @@ row 4  0.08006072 6.669182</code></pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a></a>d<span class="sc">$</span>V2_int <span class="ot">&lt;-</span> <span class="fu">as.integer</span>(d<span class="sc">$</span>V2_new)</span>
 <span id="cb51-2"><a></a>d</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>               V1   V2_new V3 V3_factor V2_int
-row 1 -0.96321159 6.593861  a Amsterdam      6
-row 2 -0.13279578 3.434315  a Amsterdam      3
-row 3 -1.63140062 5.227317  b   Utrecht      5
-row 4  0.08006072 6.669182  b   Utrecht      6
-row 5  1.79539114 4.763027  b   Utrecht      4</code></pre>
+<pre><code>                V1    V2_new V3 V3_factor V2_int
+row 1  0.421386834 0.8741231  a Amsterdam      0
+row 2 -0.601229790 4.8939845  a Amsterdam      4
+row 3  0.006284239 4.2926491  b   Utrecht      4
+row 4 -0.219629323 6.1049436  b   Utrecht      6
+row 5  0.055148964 4.5848623  b   Utrecht      4</code></pre>
 </div>
 </div>
 <div class="fragment">
@@ -1511,12 +1511,12 @@ row 5  1.79539114 4.763027  b   Utrecht      4</code></pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a></a>d<span class="sc">$</span>V2_char <span class="ot">&lt;-</span> <span class="fu">as.character</span>(d<span class="sc">$</span>V2_int)</span>
 <span id="cb53-2"><a></a>d</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>               V1   V2_new V3 V3_factor V2_int V2_char
-row 1 -0.96321159 6.593861  a Amsterdam      6       6
-row 2 -0.13279578 3.434315  a Amsterdam      3       3
-row 3 -1.63140062 5.227317  b   Utrecht      5       5
-row 4  0.08006072 6.669182  b   Utrecht      6       6
-row 5  1.79539114 4.763027  b   Utrecht      4       4</code></pre>
+<pre><code>                V1    V2_new V3 V3_factor V2_int V2_char
+row 1  0.421386834 0.8741231  a Amsterdam      0       0
+row 2 -0.601229790 4.8939845  a Amsterdam      4       4
+row 3  0.006284239 4.2926491  b   Utrecht      4       4
+row 4 -0.219629323 6.1049436  b   Utrecht      6       6
+row 5  0.055148964 4.5848623  b   Utrecht      4       4</code></pre>
 </div>
 </div>
 </div>
@@ -1561,12 +1561,12 @@ row 5  1.79539114 4.763027  b   Utrecht      4       4</code></pre>
 [1] 1 2 3 4 5
 
 [[2]]
-               V1   V2_new V3 V3_factor V2_int V2_char
-row 1 -0.96321159 6.593861  a Amsterdam      6       6
-row 2 -0.13279578 3.434315  a Amsterdam      3       3
-row 3 -1.63140062 5.227317  b   Utrecht      5       5
-row 4  0.08006072 6.669182  b   Utrecht      6       6
-row 5  1.79539114 4.763027  b   Utrecht      4       4</code></pre>
+                V1    V2_new V3 V3_factor V2_int V2_char
+row 1  0.421386834 0.8741231  a Amsterdam      0       0
+row 2 -0.601229790 4.8939845  a Amsterdam      4       4
+row 3  0.006284239 4.2926491  b   Utrecht      4       4
+row 4 -0.219629323 6.1049436  b   Utrecht      6       6
+row 5  0.055148964 4.5848623  b   Utrecht      4       4</code></pre>
 </div>
 </div>
 <p>to obtain a list with a vector and a data frame.</p>
@@ -1582,12 +1582,12 @@ row 5  1.79539114 4.763027  b   Utrecht      4       4</code></pre>
 [1] 1 2 3 4 5
 
 $`data frame`
-               V1   V2_new V3 V3_factor V2_int V2_char
-row 1 -0.96321159 6.593861  a Amsterdam      6       6
-row 2 -0.13279578 3.434315  a Amsterdam      3       3
-row 3 -1.63140062 5.227317  b   Utrecht      5       5
-row 4  0.08006072 6.669182  b   Utrecht      6       6
-row 5  1.79539114 4.763027  b   Utrecht      4       4</code></pre>
+                V1    V2_new V3 V3_factor V2_int V2_char
+row 1  0.421386834 0.8741231  a Amsterdam      0       0
+row 2 -0.601229790 4.8939845  a Amsterdam      4       4
+row 3  0.006284239 4.2926491  b   Utrecht      4       4
+row 4 -0.219629323 6.1049436  b   Utrecht      6       6
+row 5  0.055148964 4.5848623  b   Utrecht      4       4</code></pre>
 </div>
 </div>
 </section>
@@ -1607,12 +1607,12 @@ $`data frame`$vector
 [1] 1 2 3 4 5
 
 $`data frame`$`data frame`
-               V1   V2_new V3 V3_factor V2_int V2_char
-row 1 -0.96321159 6.593861  a Amsterdam      6       6
-row 2 -0.13279578 3.434315  a Amsterdam      3       3
-row 3 -1.63140062 5.227317  b   Utrecht      5       5
-row 4  0.08006072 6.669182  b   Utrecht      6       6
-row 5  1.79539114 4.763027  b   Utrecht      4       4</code></pre>
+                V1    V2_new V3 V3_factor V2_int V2_char
+row 1  0.421386834 0.8741231  a Amsterdam      0       0
+row 2 -0.601229790 4.8939845  a Amsterdam      4       4
+row 3  0.006284239 4.2926491  b   Utrecht      4       4
+row 4 -0.219629323 6.1049436  b   Utrecht      6       6
+row 5  0.055148964 4.5848623  b   Utrecht      4       4</code></pre>
 </div>
 </div>
 </section>
@@ -1745,23 +1745,24 @@ row 5  1.79539114 4.763027  b   Utrecht      4       4</code></pre>
 <p>They are extremely useful in data frames</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb87"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a></a>d</span>
-<span id="cb87-2"><a></a><span class="do">##                V1   V2_new V3 V3_factor V2_int V2_char</span></span>
-<span id="cb87-3"><a></a><span class="do">## row 1 -0.96321159 6.593861  a Amsterdam      6       6</span></span>
-<span id="cb87-4"><a></a><span class="do">## row 2 -0.13279578 3.434315  a Amsterdam      3       3</span></span>
-<span id="cb87-5"><a></a><span class="do">## row 3 -1.63140062 5.227317  b   Utrecht      5       5</span></span>
-<span id="cb87-6"><a></a><span class="do">## row 4  0.08006072 6.669182  b   Utrecht      6       6</span></span>
-<span id="cb87-7"><a></a><span class="do">## row 5  1.79539114 4.763027  b   Utrecht      4       4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb87-2"><a></a><span class="do">##                 V1    V2_new V3 V3_factor V2_int V2_char</span></span>
+<span id="cb87-3"><a></a><span class="do">## row 1  0.421386834 0.8741231  a Amsterdam      0       0</span></span>
+<span id="cb87-4"><a></a><span class="do">## row 2 -0.601229790 4.8939845  a Amsterdam      4       4</span></span>
+<span id="cb87-5"><a></a><span class="do">## row 3  0.006284239 4.2926491  b   Utrecht      4       4</span></span>
+<span id="cb87-6"><a></a><span class="do">## row 4 -0.219629323 6.1049436  b   Utrecht      6       6</span></span>
+<span id="cb87-7"><a></a><span class="do">## row 5  0.055148964 4.5848623  b   Utrecht      4       4</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb88"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb88-1"><a></a>d<span class="sc">$</span>V1 <span class="sc">&gt;</span> <span class="dv">0</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] FALSE FALSE FALSE  TRUE  TRUE</code></pre>
+<pre><code>[1]  TRUE FALSE  TRUE FALSE  TRUE</code></pre>
 </div>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb90"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb90-1"><a></a>d[d<span class="sc">$</span>V1 <span class="sc">&gt;</span> <span class="dv">0</span>, ]</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>              V1   V2_new V3 V3_factor V2_int V2_char
-row 4 0.08006072 6.669182  b   Utrecht      6       6
-row 5 1.79539114 4.763027  b   Utrecht      4       4</code></pre>
+<pre><code>               V1    V2_new V3 V3_factor V2_int V2_char
+row 1 0.421386834 0.8741231  a Amsterdam      0       0
+row 3 0.006284239 4.2926491  b   Utrecht      4       4
+row 5 0.055148964 4.5848623  b   Utrecht      4       4</code></pre>
 </div>
 </div>
 </section></section>
@@ -1942,7 +1943,7 @@ row 5 1.79539114 4.763027  b   Utrecht      4       4</code></pre>
   ..   tv = col_double(),
   ..   reg = col_character()
   .. )
- - attr(*, &quot;problems&quot;)=&lt;pointer: 0x757d37ece0&gt; </code></pre>
+ - attr(*, &quot;problems&quot;)=&lt;pointer: 0x7a2f571770&gt; </code></pre>
 </div>
 </div>
 </section>

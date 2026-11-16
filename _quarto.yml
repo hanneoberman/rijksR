@@ -5,6 +5,8 @@ project:
     - "*.qmd"
     # - "exercises/"
     # - "!exercises/"
+execute: 
+  cache: true
 
 website:
   title: ""
