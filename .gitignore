@@ -40,3 +40,4 @@ rsconnect/
 /.quarto/
 *.gz
 *.db
+**/*.quarto_ipynb
