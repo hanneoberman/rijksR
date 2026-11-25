@@ -178,6 +178,7 @@ files_list
 8. **If you are done, try to upload your files to GitHub.**
 
 Steps: 
+
 - Create an account. 
 - Create a new repository. 
 - Upload files. 

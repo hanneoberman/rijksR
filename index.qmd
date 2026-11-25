@@ -15,13 +15,13 @@ This course covers a gentle introduction to `R` and `RStudio`, focusing on learn
 
 | Start  |  End    | What?      |
 |:-------|:------|:-----------|
-| 13.00 | 13.30  | Lecture |
-| 13:30 | 14.15  | Practical |
-| 14.15 | 14.30  | Discussion |
-|       | break |        |
-| 15.00 | 15.30  | Lecture |
-| 15:45 | 16.30  | Practical |
-| 16:30 | 17.00  | Discussion |
+| 9.00 | 9.30  | Lecture |
+| 9:30 | 10.15  | Practical |
+| 10.15 | 10.30  | Discussion |
+|      | break |        |
+| 11.00 | 11.30  | Lecture |
+| 11:45 | 12.30  | Practical |
+| 12:30 | 13.00  | Discussion |
 
 ## Background
 
