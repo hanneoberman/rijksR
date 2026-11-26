@@ -1268,12 +1268,14 @@ Hanne Oberman
 <li class="fragment"><code>for(var in seq)</code> <code>{expr}</code></li>
 </ul></li>
 </ul>
+<div class="fragment">
 <p>Loops in R often happen under the hood, using apply functions:</p>
 <ul>
 <li class="fragment"><code>apply()</code>: apply a function to margins of a matrix</li>
 <li class="fragment"><code>sapply()</code>: apply a function to elements of a list, returns <code>vector</code> or <code>matrix</code> (if possible)</li>
 <li class="fragment"><code>lapply()</code>: apply a function to elements of a list, returns <code>list</code></li>
 </ul>
+</div>
 </section></section>
 <section>
 <section id="control-flow-i-choice" class="title-slide slide level1 center">
@@ -1598,7 +1600,15 @@ Hanne Oberman
 <li class="fragment"><code>sapply</code></li>
 <li class="fragment"><code>lapply</code></li>
 </ul>
-<p>There are more: - <code>vapply</code> - <code>mapply</code> - <code>rapply</code> - …</p>
+<div class="fragment">
+<p>There are more:</p>
+<ul>
+<li class="fragment"><code>vapply</code></li>
+<li class="fragment"><code>mapply</code></li>
+<li class="fragment"><code>rapply</code></li>
+<li class="fragment">…</li>
+</ul>
+</div>
 </section>
 <section id="apply-1" class="slide level2 build">
 <h2><code>apply()</code></h2>
@@ -1697,11 +1707,13 @@ $V3
 <li class="fragment">do some computation (e.g. calculate the mean)</li>
 <li class="fragment">return some standard output (e.g. one number with the mean)</li>
 </ol>
+<div class="fragment">
 <p>We have been using a lot of functions: code of the form <code>something()</code> is usually a function.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a></a><span class="fu">mean</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3.5</code></pre>
+</div>
 </div>
 </div>
 </section>
@@ -1757,6 +1769,7 @@ $V3
 <li class="fragment">Default options for some arguments are provided in many functions.</li>
 <li class="fragment">They allow us to provide additional (optional) arguments</li>
 </ul>
+<div class="fragment">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a></a>is_contained <span class="ot">&lt;-</span> <span class="cf">function</span>(str_1, str_2, <span class="at">print_input =</span> <span class="cn">TRUE</span>){</span>
 <span id="cb67-2"><a></a>  <span class="cf">if</span> (print_input){</span>
@@ -1777,6 +1790,7 @@ $V3
 <span id="cb69-6"><a></a><span class="do">## [1] FALSE</span></span>
 <span id="cb69-7"><a></a><span class="fu">is_contained</span>(<span class="st">&quot;R&quot;</span>, <span class="st">&quot;rstudio&quot;</span>, <span class="at">print_input =</span> <span class="cn">FALSE</span>)</span>
 <span id="cb69-8"><a></a><span class="do">## [1] FALSE</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div>
 </section>
 <section id="create-documentation-of-functions" class="slide level2">
@@ -1830,6 +1844,7 @@ $V3
 <li class="fragment">First, search the global environment (i.e., your workspace)</li>
 <li class="fragment">If it cannot be found, search each of the loaded packages</li>
 </ul>
+<div class="fragment">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a></a><span class="fu">search</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-stdout">
@@ -1843,6 +1858,7 @@ $V3
 </div>
 </div>
 <p>The order of packages is important.</p>
+</div>
 </section>
 <section id="scoping-rules-in-r-functions" class="slide level2">
 <h2>Scoping rules in <code>R</code>: Functions</h2>
@@ -1852,6 +1868,7 @@ $V3
 <li class="fragment">If it cannot be found, search in the global environment (i.e., your workspace)</li>
 <li class="fragment">If it cannot be found, search each of the loaded packages</li>
 </ul>
+<div class="fragment">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a></a>y <span class="ot">&lt;-</span> <span class="dv">3</span></span>
 <span id="cb74-2"><a></a>test_t <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
@@ -1868,6 +1885,7 @@ $V3
 <span id="cb75-5"><a></a>}</span>
 <span id="cb75-6"><a></a><span class="fu">test_t</span>()</span>
 <span id="cb75-7"><a></a><span class="do">## [1] 2</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
 </div>
 </section>
 <section id="scoping-rules-in-r-functions-1" class="slide level2">

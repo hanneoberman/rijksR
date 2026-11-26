@@ -4,7 +4,17 @@ project:
   render:  
     - "*.qmd"
     # - "content/"
-    # - "!content/"
+    - "!content/exercise_examples"
+    - "!content/exercise_examples/markdown.Rmd"
+    - "!content/exercise_examples/notebook.R"
+    - "!content/exercise_examples/quarto.qmd"
+    - "!content/exercise_examples/notebook.html"
+  resources:
+    - "content/exercise_examples/markdown.Rmd"
+    - "content/exercise_examples/notebook.R"
+    - "content/exercise_examples/quarto.qmd"
+    - "content/exercise_examples/notebook.html"
+    - "content/common_datasets/dataset_boys.csv"
 execute: 
   cache: true
 

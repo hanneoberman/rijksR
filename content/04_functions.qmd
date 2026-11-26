@@ -67,7 +67,7 @@ library(tidyverse)
 
 ---
 
-In the following exercises we will use the same dataset as last time, boys. You need to download `dataset_boys.csv` from [here](https://hanneoberman.github.io/rijksR/content/common_datasets/dataset_boys.csv) and add it to a folder "data" in the same folder as your markdown file.
+In the following exercises we will use the same dataset as last time, boys. You need to have downloaded the `dataset_boys.csv` (or do so now from [here](https://raw.githubusercontent.com/hanneoberman/rijksR/refs/heads/main/content/common_datasets/dataset_boys.csv)) and add it to a folder "data" in the same folder as your markdown file.
 
 Then, read the file dataset_boys.csv using the code in the next cell. The dataset contains the growth of Dutch boys in the 20th century ([amices.org/mice](https://amices.org/mice/reference/boys.html)).
 
