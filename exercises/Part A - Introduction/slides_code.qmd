@@ -5,7 +5,7 @@ author:
  - name: "Gerko Vink"
  - name: "Javier Garcia-Bernardo"
  - name: "Hanne Oberman"
-date: "11/28/2025"
+date: "11/26/2026"
 execute:
   echo: true
 format: 
@@ -34,8 +34,7 @@ format:
 - Gentle introduction to:
   - Programming languages
   - R for data science
-- Provide a foundation for the [advanced R course](https://www.gerkovink.com/rijkR/)
-
+- Provide a foundation for the advanced R course
 
 ## Why do we care about R?
 ##### Why programming languages?
@@ -45,12 +44,14 @@ format:
 - Flexibly (new methods)
 - Reproducibility! (open an old Excel file and try to understand what you did) 
 
-. . . 
+::: fragment
 
 ##### Why R:
 - Designed for statistics/data science (=easy pipelines)
 - Huge community of users (=support)
 - Integration between libraries (=everything just works)
+
+:::
 
 ## R for data science 
 

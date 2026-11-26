@@ -4,7 +4,7 @@ author:
  - name: "Gerko Vink"
  - name: "Javier Garcia-Bernardo"
  - name: "Hanne Oberman"
-date: "11/20/2025"
+date: "11/27/2026"
 filters:
   - toggle
 toggle:
@@ -58,7 +58,7 @@ boys <- na.omit(boys)
 
 ```{r, echo=FALSE}
 # Reading the file in the background
-boys <- readr::read_delim("../common_datasets/dataset_boys.csv",delim=",")
+boys <- readr::read_delim("./common_datasets/dataset_boys.csv",delim=",")
 # Keep only a few columns
 boys <- boys[, c("age","wgt","bmi")]
 # Drop missing values

@@ -34,7 +34,7 @@ R is rapidly becoming the standard platform for data manipulation, visualization
 Before you start the exercises, make sure you can use R either locally on your 
 PC or online through Posit Cloud.
 
-- [Installation](exercises/installation.html)
+- [Installation](content/00_installation.html)
 
 <!-- ##### Day 1: -->
 <!-- - Installing R/Rstudio or signing up for Posit Cloud (done at home)  -->
@@ -66,16 +66,16 @@ PC or online through Posit Cloud.
 
 This course is broken into the following four parts.
 
-- [Part 1: R code](exercises/Part A - Introduction/01_code.qmd)
-- [Part 2: Data in R](exercises/Part B - Data types and structures/02_data.qmd)
-- [Part 3: Programming](exercises/Part C - Programming/03_programming.qmd)
-- [Part 4: Functions](exercises/Part D - Tidy/04_functions.qmd)
+- [Part 1: R code](content/01_code.qmd)
+- [Part 2: Data in R](content/02_data.qmd)
+- [Part 3: Programming](content/03_programming.qmd)
+- [Part 4: Functions](content/04_functions.qmd)
 
 ### Slides
 
 For each of the four parts, the lecture slides are available as follows.
 
-- [Slides part 1: R code](exercises/Part A - Introduction/slides_code.qmd)
-- [Slides part 2: Data in R](exercises/Part B - Data types and structures/slides_data.qmd)
-- [Slides part 3: Programming](exercises/Part C - Programming/slides_programming.qmd)
-- [Slides part 4: Functions](exercises/Part D - Tidy/slides_functions.qmd)
+- [Slides part 1: R code](content/slides_01_code.qmd)
+- [Slides part 2: Data in R](content/slides_02_data.qmd)
+- [Slides part 3: Programming](content/slides_03_programming.qmd)
+- [Slides part 4: Functions](content/slides_04_functions.qmd)

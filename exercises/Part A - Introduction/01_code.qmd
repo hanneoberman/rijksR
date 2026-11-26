@@ -40,7 +40,8 @@ We start with the very basics and will move towards more advanced operations in 
 1. **Open `RStudio`**
 
 The following window will appear. 
-![alt text](figuresPractical/fig1.png)
+
+![](../content/img/lab_01_fig1.png)
 
 RStudio is divided in 3 panes, namely the console, the environment/history pane and the pane where we can access our files, plots, the help files, make packages and view our data objects. You can change the order of the panes to your liking through `RStudio`'s preferences. I did, that is why your pane layout might differ from the layout in the above screenshot.
 
@@ -50,7 +51,7 @@ If we open an `R`-script (i.e. a file that contains `R` code), a fourth pane ope
 
 2. **Open a new `R`-script.**
 
-In the top left you will find ![alt text](figuresPractical/fig2.png). Click it and select `R`-script. 
+In the top left you will find ![alt text](img/lab_01_fig2.png). Click it and select `R`-script. 
 
 A new pane opens, and we can start typing our code. It is preferable to work from an `R`-script instead of directly working in the console for at least the following reasons (there are many more). 
 
@@ -79,7 +80,7 @@ The line `a <- 100` assigns the value `100` to object `a`. When you run your cod
 4. **Select both lines of code and run the code by pressing Ctrl-Enter or Ctrl-R (Windows/Linux) or Cmd-Enter (Mac), or clicking on "Run"**
 
 Your code is executed and now appears in the console. If you type `a` in the console, `R` will return the assigned value. Try it. 
-![alt text](figuresPractical/fig3.png)
+![alt text](img/lab_01_fig3.png)
 
 The shortcut Ctrl-Enter or Cmd-Enter is your friend: it runs the current selection, or, if nothing is selected, the current line. if Ctrl-Enter or Cmd-Enter yields no result, you probably have selected the console pane. You can switch to the code pane by moving the mouse cursor and clicking on the desired line in the code pane, or through Ctrl-1 (Windows/Linux/Mac). Alternatively, you can move to the console through Ctrl-2 (Windows/Linux/Mac). 
 
@@ -89,7 +90,7 @@ This is how you enter and run code in `R` by using `RStudio`.
 
 5. **Save your code file as `Practical_1.R` in a folder named `Practicals`**
 
-You can use the standard Ctrl-s (Windows/Linux) or Cmd-s (Mac) or click on the icon ![alt text](figuresPractical/fig4.png) in the code pane. 
+You can use the standard Ctrl-s (Windows/Linux) or Cmd-s (Mac) or click on the icon ![alt text](img/lab_01_fig4.png) in the code pane. 
 
 Your document is now saved. We saved it in a separate folder so that we are able to create a project out of our practicals. 
 
@@ -99,7 +100,7 @@ Your document is now saved. We saved it in a separate folder so that we are able
 
 ---
 
-6. **Create a project by clicking on ![alt text](figuresPractical/fig5.png) in the top-right corner of `RStudio`**
+6. **Create a project by clicking on ![alt text](img/lab_01_fig5.png) in the top-right corner of `RStudio`**
 
 ::: {.callout-note}
 If you use Posit Cloud, you have already created an R Project as part of the installation set-up. To verify, see the 'Files' panel.
@@ -109,7 +110,7 @@ Select `New Project`, click `Existing Directory` and navigate to the folder wher
 
 You will notice in the files panel that a file `Practicals.RProj` has been created
 
-![](figuresPractical/fig6.png)
+![](img/lab_01_fig6.png)
 
 The possibility to categorize your work in projects is one of the benefits of using `RStudio`. Within a project, everything is relative to the `.Rproj` file. This means that if you share the folder with someone else, this someone only has to open the `.Rproj` file to be able to access and run all code and documents involved with this project. Again, when considering reproducability of research, working in projects is a huge advantage. 
 
@@ -129,7 +130,7 @@ If you use Posit Cloud, use the 'Upload' button (in the 'Files' panel) to add th
 
 ---
  
-9. **Compile the script as a `html` file. Click on the ![alt text](figuresPractical/fig7.png) icon and select `html` as the notebook output format. **
+9. **Compile the script as a `html` file. Click on the ![alt text](img/lab_01_fig7.png) icon and select `html` as the notebook output format. **
 
 The benefit of using html as an output format lies in the dimensional properties of a web-page. Especially when dealing with long code-files, large output from analyses or many graphs, exporting your file as html is much more convenient. You can simply scroll down or up to see the 'rest', instead of having to flip through pages back and forth to compare code, graphs or output. 
 
