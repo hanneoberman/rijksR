@@ -1232,6 +1232,7 @@ Hanne Oberman
 <li class="fragment">Collection of elements of the <strong>same type</strong></li>
 <li class="fragment">We concatenate the elements using the <code>c()</code> function (stands for concatenation)</li>
 </ul>
+<div class="fragment">
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="co">#To create a vector we used `c()`, which stands for &#39;concatenation&#39;. </span></span>
 <span id="cb18-2"><a></a>a <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
@@ -1239,12 +1240,15 @@ Hanne Oberman
 <span id="cb18-4"><a></a>a</span>
 <span id="cb18-5"><a></a><span class="do">## [1] 1 2 3 4 5</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</div>
 <div class="fragment">
 <p>Characters (or character strings) in <code>R</code> are indicated by the double quote identifier.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">c</span>(a, <span class="st">&quot;A&quot;</span>)</span>
 <span id="cb19-2"><a></a><span class="do">## [1] &quot;1&quot; &quot;2&quot; &quot;3&quot; &quot;4&quot; &quot;5&quot; &quot;A&quot;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</div>
+<div class="fragment">
 <p>Repeating the same element many times</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">rep</span>(a, <span class="dv">3</span>)</span>
@@ -1261,6 +1265,7 @@ Hanne Oberman
 <span id="cb21-3"><a></a><span class="do">## [1] 3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
+<div class="fragment">
 <section id="retrieving-elements-from-vectors-by-range" class="slide level2">
 <h2>Retrieving elements from vectors by range</h2>
 <p>If we would want the first to the third (both included)</p>
@@ -1270,6 +1275,8 @@ Hanne Oberman
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1 2 3</code></pre>
 </div>
+</div>
+</section>
 </div>
 <div class="fragment">
 <p>Empty means all elements</p>
@@ -1281,7 +1288,6 @@ Hanne Oberman
 </div>
 </div>
 </div>
-</section>
 <section id="matrix" class="slide level2">
 <h2>Matrix</h2>
 <p>Multiple vectors in one object</p>
@@ -1326,6 +1332,8 @@ Hanne Oberman
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a>c[<span class="dv">1</span>, <span class="dv">2</span>]</span>
 <span id="cb30-2"><a></a><span class="do">## [1] 3</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</div>
+<div class="fragment">
 <p>We can also use ranges.</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>c[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="dv">2</span>]</span>
@@ -1484,6 +1492,8 @@ row 4 0.6980276 6.876365</code></pre>
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a></a><span class="fu">class</span>(d<span class="sc">$</span>V3_factor)</span>
 <span id="cb49-2"><a></a><span class="do">## [1] &quot;factor&quot;</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
+</div>
+<div class="fragment">
 <p>Structure</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a></a><span class="fu">str</span>(d<span class="sc">$</span>V3_factor)</span>
