@@ -51,7 +51,7 @@ student cleaned <- 3
 - Some programming languages tell you how to handle this, but not R.
 - I use `students_cleaned`. This is the standard of Python. Use any, but be consistent
 
-. . . 
+::: fragment 
 
 ```{r, eval = FALSE}
 student_cleaned <- 3 #studentCleaned
@@ -61,6 +61,7 @@ student_cleaned <- 3 #studentCleaned
 
 <!-- ![http://journal.r-project.org/archive/2012-2/RJournal_2012-2_Baaaath.pdf](){width=70%} -->
 
+:::
 
 # Data Types 
 
@@ -140,6 +141,8 @@ Objects that contain more than one element
 
 - Collection of elements of the __same type__
 - We concatenate the elements using the `c()` function (stands for concatenation)
+
+::: fragment
 ```{r, collapse=TRUE}
 #To create a vector we used `c()`, which stands for 'concatenation'. 
 a <- c(1, 2, 3, 4, 5)
@@ -147,17 +150,23 @@ a <- 1:5
 a
 ```
 
-. . . 
+:::
+
+::: fragment
 
 Characters (or character strings) in `R` are indicated by the double quote identifier. 
 ```{r, collapse=TRUE}
 c(a, "A")
 ```
 
+:::
+
+::: fragment
 Repeating the same element many times
 ```{r, collapse=TRUE}
 rep(a, 3)
 ```
+:::
 
 ## Retrieving elements from vectors by position
 If we would want just the third element, we would type
@@ -166,6 +175,7 @@ If we would want just the third element, we would type
 a[3]
 ```
 
+::: fragment
 ## Retrieving elements from vectors by range
 If we would want the first to the third (both included)
 ```{r}
@@ -173,7 +183,9 @@ If we would want the first to the third (both included)
 a[1:3]
 ```
 
-. . .
+:::
+
+::: fragment
 
 Empty means all elements
 ```{r}
@@ -181,7 +193,7 @@ Empty means all elements
 a[]
 ```
 
-
+:::
 
 ## Matrix
 
@@ -191,13 +203,15 @@ Multiple vectors in one object
 matrix(3, nrow = 5, ncol = 2)
 ```
 
-. . . 
+::: fragment 
 
 ```{r,collapse=TRUE}
 #We can also create them with vectors, it fills the matrix by column. But be careful!
 c <- matrix(c(1,2,3), nrow = 5, ncol = 2)
 c
 ```
+
+:::
 
 ## Retrieving elements in matrices
 
@@ -211,18 +225,22 @@ The second column is retrieved with
 c[, 2]
 ```
 
-. . . 
+::: fragment 
 
 The intersection of the first row and second column is called by
 ```{r, collapse=TRUE}
 c[1, 2]
 ```
 
+:::
+
+::: fragment
 We can also use ranges.
 ```{r, collapse=TRUE}
 c[1:3, 2]
 ```
 
+:::
 
 ## Matrices with mixed numeric / character data
 
@@ -257,7 +275,7 @@ row.names(d) <- c("row 1", "row 2", "row 3", "row 4", "row 5")
 d
 ```
 
-. . . 
+::: fragment 
 
 ```{r,collapse=TRUE}
 #Columns
@@ -265,6 +283,7 @@ names(d) <- c("V1", "V2_new", "V3")
 d
 ```
 
+:::
 
 ## Retrieving row elements in data frames
 There are two ways to obtain row `3` from data frame `d`:
@@ -284,13 +303,15 @@ d[, "V2_new"] # Careful! In tibbles this returns a one-col tibble
 d[, 2] # Careful! In tibbles this returns a one-col tibble
 ```
 
-. . .
+::: fragment
 
 Using it without the comma returns a dataframe
 ```{r,collapse=TRUE}
 d["V2_new"] # and d[2]
 
 ```
+
+:::
 
 ## Retrieving both
 
@@ -299,13 +320,14 @@ The intersection between row 2 and column 3 can be obtained by
 d[2, 3]
 ```
 
-. . . 
+::: fragment 
 
 And you can also use ranges
 ```{r}
 d[3:4, 1:2]
 ```
 
+:::
 
 ## Factor
 - A data type used to encode categorical variables
@@ -315,18 +337,21 @@ d$V3_factor <- factor(d$V3, labels = c("Amsterdam","Utrecht"))
 d
 ```
 
-. . .
+::: fragment
 
 Class
 ```{r,collapse=TRUE}
 class(d$V3_factor)
 ```
 
+:::
+
+::: fragment
 Structure
 ```{r,collapse=TRUE}
 str(d$V3_factor)
 ```
-
+:::
 
 ## Use of as.xxx functions
 You can convert between data types (as long as the conversion is valid)
@@ -335,19 +360,21 @@ d$V2_int <- as.integer(d$V2_new)
 d
 ```
 
-. . . 
+::: fragment 
 
 ```{r}
 d$V2_char <- as.character(d$V2_int)
 d
 ```
 
+:::
+
 ## List 
 
 - Mixed type
 - You can have a list of everything mixed with everything. 
 
-. . . 
+::: fragment 
 
 For example, an simple list can be created by
 ```{r}
@@ -356,6 +383,7 @@ f <- list(a) #convert to a list
 f
 ```
 
+:::
 
 ## Using list elements
 
@@ -432,13 +460,14 @@ example_vector[example_vector>3]
 
 Why does this work?
 
-. . . 
+::: fragment 
 
 It filters the vector, keeping the elements where the condition is TRUE
 ```{r, collapse=TRUE}
 example_vector > 3
 ```
 
+:::
 
 ## Filtering a vector
 If we would like the elements that are smaller than 3 OR larger than 3, we could type.
@@ -458,13 +487,14 @@ example_vector %in% c(1,5)
 example_vector[example_vector %in% c(1,5)]
 ```
 
-. . . 
+::: fragment 
 
 Typing `!` before a logical operator takes the complement of that action (the opposite) 
 ```{r}
 !(example_vector %in% c(1,5))
 ```
 
+:::
 
 ## Filtering a vector
 
@@ -490,13 +520,15 @@ d[d$V1 > 0, ]
 mean(c(1,2,3,4,5))
 ```
 
-. . . 
+::: fragment 
 
 - You can save the output with a name
 ```{r,collapse=TRUE}
 mean_v <- mean(c(1,2,3,4,5))
 mean_v
 ```
+
+:::
 
 ## Function from a package
 
@@ -518,7 +550,7 @@ mean(c(1,2,3,4,5,NA))
 mean(c(1,2,3,4,5,NA), na.rm = TRUE)
 ```
 
-. . . 
+::: fragment 
 
 - You can create your own (more on this later)
 ```{r,collapse=TRUE}
@@ -529,7 +561,7 @@ my_mean <- function(vector_num){
 my_mean(c(1,2,3,4,5))
 ```
 
-
+:::
 
 # Math errors
 
@@ -540,7 +572,7 @@ my_mean(c(1,2,3,4,5))
 0 / 0
 ```
 
-. . . 
+::: fragment 
 
 - Also impossible are calculations based on missing values (NAs)
 ```{r,collapse=TRUE}
@@ -552,6 +584,8 @@ mean(c(1, 2, NA, 4, 5))
 mean(c(1, 2, NA, 4, 5), na.rm = TRUE)
 mean(na.omit(c(1, 2, NA, 4, 5)))
 ```
+
+:::
 
 ## Be careful with rounding errors
 - The computer uses approximations of the numbers (floating-point arithmetic). This can create problems in R:
