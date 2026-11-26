@@ -213,14 +213,15 @@ Exception: Always place a space after a comma.
   - We often want to repeat the execution of a piece of code many times.
   - `for(var in seq)` `{expr}`
 
+::: fragment
+
 Loops in R often happen under the hood, using apply functions:
 
 - `apply()`: apply a function to margins of a matrix
 - `sapply()`: apply a function to elements of a list, returns `vector` or `matrix` (if possible)
 - `lapply()`: apply a function to elements of a list, returns `list`
 
-
-
+:::
 
 # Control-flow (I): Choice
 
@@ -505,11 +506,16 @@ We will look at three examples:
 - `sapply`
 - `lapply`
 
+::: fragment
+
 There are more:
+
 - `vapply`
 - `mapply`
 - `rapply`
 - ...
+
+:::
 
 ## `apply()` {.build}
 `apply` is used for homogeneous matrices/dataframes. It applies a function to each *row* or *column*. It returns a vector or a matrix.
@@ -583,11 +589,15 @@ Functions are reusable pieces of code that
 2. do some computation  (e.g. calculate the mean)
 3. return some standard output (e.g. one number with the mean)
 
+::: fragment
+
 We have been using a lot of functions: code of the form `something()` is usually a function. 
 
 ```{r}
 mean(1:6)
 ```
+
+:::
 
 ## Our own function
 
@@ -639,6 +649,8 @@ sapply(df, {function(x) quantile(x, .42)})
 * Default options for some arguments are provided in many functions. 
 * They allow us to provide additional (optional) arguments
 
+::: fragment
+
 ```{r}
 is_contained <- function(str_1, str_2, print_input = TRUE){
   if (print_input){
@@ -657,6 +669,8 @@ is_contained("R", "rstudio")
 is_contained("R", "rstudio", print_input = TRUE)
 is_contained("R", "rstudio", print_input = FALSE)
 ```
+
+:::
 
 ## Create documentation of functions
 
@@ -714,13 +728,14 @@ In the interactive computation (outside of functions, e.g., your console), this 
 - First, search the global environment (i.e., your workspace) 
 - If it cannot be found, search each of the loaded packages
 
+::: fragment
 
 ```{r}
 search()
 ```
 The order of packages is important.
 
-
+:::
 
 ## Scoping rules in `R`: Functions
 
@@ -730,6 +745,7 @@ Inside a function, this happens in the following order:
 - If it cannot be found, search in the global environment (i.e., your workspace) 
 - If it cannot be found, search each of the loaded packages
 
+::: fragment
 
 ```{r, collapse=TRUE}
 y <- 3
@@ -746,6 +762,8 @@ test_t <- function() {
 }
 test_t()
 ```
+
+:::
 
 ## Scoping rules in `R`: Functions
 

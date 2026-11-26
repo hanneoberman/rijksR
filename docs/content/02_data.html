@@ -4586,7 +4586,7 @@ Note
 <ol start="8" type="1">
 <li><strong>Read the file <code>dataset_boys.csv</code>.</strong></li>
 </ol>
-<p>First create a folder “data” in your project. Then download it from <a href="https://hanneoberman.github.io/content/common_datasets/dataset_boys.csv" target="_blank">here</a> and add it to that folder (use Ctrl+S in the browser to download it).</p>
+<p>First create a folder “data” in your project. Then download it from <a href="content/common_datasets/dataset_boys.csv" target="_blank">here</a> and add it to that folder (use Ctrl+S in the browser to download it).</p>
 <p>First you need to load the required library to read the CSV (<code>readr</code>). You may need to install it first.</p>
 <div class="cell toggleable-cell output-sync-on initially-hidden">
 <details class="code-fold">
@@ -4626,11 +4626,10 @@ Note
 <div class="cell toggleable-cell output-sync-on initially-hidden">
 <details class="code-fold">
 <summary>Code</summary>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co">#To update</span></span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>con <span class="ot">&lt;-</span> <span class="fu">url</span>(<span class="st">&quot;https://hanneoberman.github.io/rijksR/content/common_datasets/dataset_boys.csv&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>con <span class="ot">&lt;-</span> <span class="fu">url</span>(<span class="st">&quot;https://raw.githubusercontent.com/hanneoberman/rijksR/refs/heads/main/content/common_datasets/dataset_boys.csv&quot;</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </details>
 </div>
-<p>In the above code we store the connection in object <code>con</code> and then load the connectio.</p>
+<p>In the above code we store the connection in object <code>con</code> and then load the connection.</p>
 <p>The <code>boys</code> object will be added to your Global Environment. You can now use the <code>boys</code> data by running</p>
 <div class="cell toggleable-cell output-sync-on initially-hidden">
 <details class="code-fold">
@@ -4914,7 +4913,7 @@ Attaching package: &#39;dplyr&#39;</code></pre>
 </section>
 <section id="exercises-15-17-visualization" class="level2">
 <h2 class="anchored" data-anchor-id="exercises-15-17-visualization">Exercises 15-17: Visualization</h2>
-<p>Download the file <code>example_csv.csv</code> from <a href="https://hanneoberman.github.io/rijksR/content/common_datasets/dataset_boys.csv" target="_blank">here</a> and add it to your data folder.</p>
+<p>Download the file <code>example_csv.csv</code> from <a href="content/common_datasets/dataset_boys.csv" target="_blank">here</a> and add it to your data folder.</p>
 <p>Open the file in your text editor to see how it looks. What is the first line?</p>
 <ol start="15" type="1">
 <li><strong>Read the file and save it with the name “df_events”.</strong> You’ll need to use the argument “skip” in the <code>read_delim()</code> function to skip the first line. Make sure it looks fine by printing the head.</li>
@@ -5589,7 +5588,7 @@ dbl (2): Time, Number
 <span id="cb78-153"><a href="#cb78-153" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb78-154"><a href="#cb78-154" aria-hidden="true" tabindex="-1"></a><span class="ss">8. </span>**Read the file `dataset_boys.csv`.** </span>
 <span id="cb78-155"><a href="#cb78-155" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-156"><a href="#cb78-156" aria-hidden="true" tabindex="-1"></a>First create a folder &quot;data&quot; in your project. Then download it from <span class="co">[</span><span class="ot">here</span><span class="co">](https://hanneoberman.github.io/content/common_datasets/dataset_boys.csv)</span>{target=&quot;_blank&quot;} and add it to that folder (use Ctrl+S in the browser to download it).</span>
+<span id="cb78-156"><a href="#cb78-156" aria-hidden="true" tabindex="-1"></a>First create a folder &quot;data&quot; in your project. Then download it from <span class="co">[</span><span class="ot">here</span><span class="co">](content/common_datasets/dataset_boys.csv)</span>{target=&quot;_blank&quot;} and add it to that folder (use Ctrl+S in the browser to download it).</span>
 <span id="cb78-157"><a href="#cb78-157" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb78-158"><a href="#cb78-158" aria-hidden="true" tabindex="-1"></a>First you need to load the required library to read the CSV (<span class="in">`readr`</span>). You may need to install it first.</span>
 <span id="cb78-159"><a href="#cb78-159" aria-hidden="true" tabindex="-1"></a></span>
@@ -5620,155 +5619,154 @@ dbl (2): Time, Number
 <span id="cb78-192"><a href="#cb78-192" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb78-193"><a href="#cb78-193" aria-hidden="true" tabindex="-1"></a>Alternatively, you can import datasets directly from the internet by running and loading the connection</span>
 <span id="cb78-196"><a href="#cb78-196" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb78-197"><a href="#cb78-197" aria-hidden="true" tabindex="-1"></a><span class="co">#To update</span></span>
-<span id="cb78-198"><a href="#cb78-198" aria-hidden="true" tabindex="-1"></a>con <span class="ot">&lt;-</span> <span class="fu">url</span>(<span class="st">&quot;https://hanneoberman.github.io/rijksR/content/common_datasets/dataset_boys.csv&quot;</span>)</span>
-<span id="cb78-199"><a href="#cb78-199" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb78-200"><a href="#cb78-200" aria-hidden="true" tabindex="-1"></a>In the above code we store the connection in object <span class="in">`con`</span> and then load the connectio.</span>
-<span id="cb78-201"><a href="#cb78-201" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-202"><a href="#cb78-202" aria-hidden="true" tabindex="-1"></a>The <span class="in">`boys`</span> object will be added to your Global Environment. You can now use the <span class="in">`boys`</span> data by running</span>
-<span id="cb78-203"><a href="#cb78-203" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-206"><a href="#cb78-206" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb78-207"><a href="#cb78-207" aria-hidden="true" tabindex="-1"></a>boys <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_delim</span>(con, <span class="at">delim =</span> <span class="st">&quot;,&quot;</span>)</span>
-<span id="cb78-208"><a href="#cb78-208" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb78-197"><a href="#cb78-197" aria-hidden="true" tabindex="-1"></a>con <span class="ot">&lt;-</span> <span class="fu">url</span>(<span class="st">&quot;https://raw.githubusercontent.com/hanneoberman/rijksR/refs/heads/main/content/common_datasets/dataset_boys.csv&quot;</span>)</span>
+<span id="cb78-198"><a href="#cb78-198" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb78-199"><a href="#cb78-199" aria-hidden="true" tabindex="-1"></a>In the above code we store the connection in object <span class="in">`con`</span> and then load the connection.</span>
+<span id="cb78-200"><a href="#cb78-200" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-201"><a href="#cb78-201" aria-hidden="true" tabindex="-1"></a>The <span class="in">`boys`</span> object will be added to your Global Environment. You can now use the <span class="in">`boys`</span> data by running</span>
+<span id="cb78-202"><a href="#cb78-202" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-205"><a href="#cb78-205" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb78-206"><a href="#cb78-206" aria-hidden="true" tabindex="-1"></a>boys <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_delim</span>(con, <span class="at">delim =</span> <span class="st">&quot;,&quot;</span>)</span>
+<span id="cb78-207"><a href="#cb78-207" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb78-208"><a href="#cb78-208" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb78-209"><a href="#cb78-209" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-210"><a href="#cb78-210" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-211"><a href="#cb78-211" aria-hidden="true" tabindex="-1"></a><span class="ss">9. </span>**You can explore boys in several ways. In notebooks just write &quot;boys&quot; and run the chunk. You can also use the &quot;Environment&quot; menu to find the data &quot;boys&quot; and double click it. Alternatively write View(boys).**</span>
-<span id="cb78-212"><a href="#cb78-212" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-213"><a href="#cb78-213" aria-hidden="true" tabindex="-1"></a>Using <span class="in">`View()`</span> is preferred for inspecting datasets that are large. <span class="in">`View()`</span> opens the dataset in a spreadsheet-like window (conform MS Excel, or SPSS). If you <span class="in">`View()`</span> your own datasets, you can not edit the datasets&#39; contents. </span>
-<span id="cb78-214"><a href="#cb78-214" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-215"><a href="#cb78-215" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb78-216"><a href="#cb78-216" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-217"><a href="#cb78-217" aria-hidden="true" tabindex="-1"></a><span class="ss">10. </span>**Find out the dimensions of the <span class="in">`boys`</span> data set (use the function dim) and inspect the first and final 6 cases in the data set. **</span>
-<span id="cb78-218"><a href="#cb78-218" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-219"><a href="#cb78-219" aria-hidden="true" tabindex="-1"></a>To do it numerically, find out what the dimensions of the boys dataset are. Use the function <span class="in">`dim()`</span></span>
-<span id="cb78-222"><a href="#cb78-222" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb78-223"><a href="#cb78-223" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(boys)</span>
-<span id="cb78-224"><a href="#cb78-224" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb78-225"><a href="#cb78-225" aria-hidden="true" tabindex="-1"></a>There are 748 cases on 9 variables. </span>
-<span id="cb78-226"><a href="#cb78-226" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-227"><a href="#cb78-227" aria-hidden="true" tabindex="-1"></a>Select the first six cases</span>
-<span id="cb78-230"><a href="#cb78-230" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb78-231"><a href="#cb78-231" aria-hidden="true" tabindex="-1"></a>boys[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, ]</span>
-<span id="cb78-232"><a href="#cb78-232" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb78-233"><a href="#cb78-233" aria-hidden="true" tabindex="-1"></a>and the last six cases</span>
-<span id="cb78-236"><a href="#cb78-236" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb78-237"><a href="#cb78-237" aria-hidden="true" tabindex="-1"></a>boys[<span class="dv">743</span><span class="sc">:</span><span class="dv">748</span>, ]</span>
-<span id="cb78-238"><a href="#cb78-238" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb78-239"><a href="#cb78-239" aria-hidden="true" tabindex="-1"></a>or, more efficiently:</span>
-<span id="cb78-242"><a href="#cb78-242" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb78-243"><a href="#cb78-243" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(boys);<span class="fu">tail</span>(boys)</span>
-<span id="cb78-244"><a href="#cb78-244" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb78-245"><a href="#cb78-245" aria-hidden="true" tabindex="-1"></a>The functions <span class="in">`head()`</span> and <span class="in">`tail()`</span> are very useful functions. For example, from looking at both functions we can observe that the data are very likely sorted based on <span class="in">`age`</span>.</span>
-<span id="cb78-246"><a href="#cb78-246" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-247"><a href="#cb78-247" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb78-248"><a href="#cb78-248" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-249"><a href="#cb78-249" aria-hidden="true" tabindex="-1"></a><span class="ss">11. </span>**Inspect the <span class="in">`boys`</span> dataset with <span class="in">`str()`</span>. Use one or more functions to find distributional summary information (at least information about the minimum, the maximum, the mean and the median) for all of the variables. Give the standard deviation for <span class="in">`age`</span> and <span class="in">`bmi`</span>. ** Tip: make use of the help (?) and help search (??) functionality in <span class="in">`R`</span>. </span>
-<span id="cb78-250"><a href="#cb78-250" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-253"><a href="#cb78-253" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb78-254"><a href="#cb78-254" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(boys)</span>
-<span id="cb78-255"><a href="#cb78-255" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(boys) <span class="co">#summary info</span></span>
-<span id="cb78-256"><a href="#cb78-256" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(boys<span class="sc">$</span>age) <span class="co">#standard deviation for age</span></span>
-<span id="cb78-257"><a href="#cb78-257" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(boys<span class="sc">$</span>bmi, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="co">#standard deviation for bmi</span></span>
-<span id="cb78-258"><a href="#cb78-258" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb78-259"><a href="#cb78-259" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-260"><a href="#cb78-260" aria-hidden="true" tabindex="-1"></a>Note that <span class="in">`bmi`</span> contains 21 missing values, e.g. by looking at the summary information. Therefor we need to use <span class="in">`na.rm = T`</span> to calculate the standard deviation on the observed cases only.</span>
-<span id="cb78-261"><a href="#cb78-261" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-262"><a href="#cb78-262" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb78-263"><a href="#cb78-263" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-264"><a href="#cb78-264" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 12-14: Filtering the CSV</span></span>
-<span id="cb78-265"><a href="#cb78-265" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-266"><a href="#cb78-266" aria-hidden="true" tabindex="-1"></a><span class="ss">12. </span>**Select all boys that are 20 years or older. How many are there?**</span>
-<span id="cb78-267"><a href="#cb78-267" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-268"><a href="#cb78-268" aria-hidden="true" tabindex="-1"></a>The logical operators (TRUE vs FALSE) are a very powerful tool in <span class="in">`R`</span>. For example, we can just select the rows (respondents) in the data that are older than 20 by putting the logical operater within the row index of the dataset:</span>
-<span id="cb78-271"><a href="#cb78-271" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb78-272"><a href="#cb78-272" aria-hidden="true" tabindex="-1"></a>boys2 <span class="ot">&lt;-</span> boys[(boys<span class="sc">$</span>age <span class="sc">&gt;=</span> <span class="dv">20</span>), ]</span>
-<span id="cb78-273"><a href="#cb78-273" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(boys2)</span>
-<span id="cb78-274"><a href="#cb78-274" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb78-210"><a href="#cb78-210" aria-hidden="true" tabindex="-1"></a><span class="ss">9. </span>**You can explore boys in several ways. In notebooks just write &quot;boys&quot; and run the chunk. You can also use the &quot;Environment&quot; menu to find the data &quot;boys&quot; and double click it. Alternatively write View(boys).**</span>
+<span id="cb78-211"><a href="#cb78-211" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-212"><a href="#cb78-212" aria-hidden="true" tabindex="-1"></a>Using <span class="in">`View()`</span> is preferred for inspecting datasets that are large. <span class="in">`View()`</span> opens the dataset in a spreadsheet-like window (conform MS Excel, or SPSS). If you <span class="in">`View()`</span> your own datasets, you can not edit the datasets&#39; contents. </span>
+<span id="cb78-213"><a href="#cb78-213" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-214"><a href="#cb78-214" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb78-215"><a href="#cb78-215" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-216"><a href="#cb78-216" aria-hidden="true" tabindex="-1"></a><span class="ss">10. </span>**Find out the dimensions of the <span class="in">`boys`</span> data set (use the function dim) and inspect the first and final 6 cases in the data set. **</span>
+<span id="cb78-217"><a href="#cb78-217" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-218"><a href="#cb78-218" aria-hidden="true" tabindex="-1"></a>To do it numerically, find out what the dimensions of the boys dataset are. Use the function <span class="in">`dim()`</span></span>
+<span id="cb78-221"><a href="#cb78-221" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb78-222"><a href="#cb78-222" aria-hidden="true" tabindex="-1"></a><span class="fu">dim</span>(boys)</span>
+<span id="cb78-223"><a href="#cb78-223" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb78-224"><a href="#cb78-224" aria-hidden="true" tabindex="-1"></a>There are 748 cases on 9 variables. </span>
+<span id="cb78-225"><a href="#cb78-225" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-226"><a href="#cb78-226" aria-hidden="true" tabindex="-1"></a>Select the first six cases</span>
+<span id="cb78-229"><a href="#cb78-229" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb78-230"><a href="#cb78-230" aria-hidden="true" tabindex="-1"></a>boys[<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>, ]</span>
+<span id="cb78-231"><a href="#cb78-231" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb78-232"><a href="#cb78-232" aria-hidden="true" tabindex="-1"></a>and the last six cases</span>
+<span id="cb78-235"><a href="#cb78-235" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb78-236"><a href="#cb78-236" aria-hidden="true" tabindex="-1"></a>boys[<span class="dv">743</span><span class="sc">:</span><span class="dv">748</span>, ]</span>
+<span id="cb78-237"><a href="#cb78-237" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb78-238"><a href="#cb78-238" aria-hidden="true" tabindex="-1"></a>or, more efficiently:</span>
+<span id="cb78-241"><a href="#cb78-241" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb78-242"><a href="#cb78-242" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(boys);<span class="fu">tail</span>(boys)</span>
+<span id="cb78-243"><a href="#cb78-243" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb78-244"><a href="#cb78-244" aria-hidden="true" tabindex="-1"></a>The functions <span class="in">`head()`</span> and <span class="in">`tail()`</span> are very useful functions. For example, from looking at both functions we can observe that the data are very likely sorted based on <span class="in">`age`</span>.</span>
+<span id="cb78-245"><a href="#cb78-245" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-246"><a href="#cb78-246" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb78-247"><a href="#cb78-247" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-248"><a href="#cb78-248" aria-hidden="true" tabindex="-1"></a><span class="ss">11. </span>**Inspect the <span class="in">`boys`</span> dataset with <span class="in">`str()`</span>. Use one or more functions to find distributional summary information (at least information about the minimum, the maximum, the mean and the median) for all of the variables. Give the standard deviation for <span class="in">`age`</span> and <span class="in">`bmi`</span>. ** Tip: make use of the help (?) and help search (??) functionality in <span class="in">`R`</span>. </span>
+<span id="cb78-249"><a href="#cb78-249" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-252"><a href="#cb78-252" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb78-253"><a href="#cb78-253" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(boys)</span>
+<span id="cb78-254"><a href="#cb78-254" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(boys) <span class="co">#summary info</span></span>
+<span id="cb78-255"><a href="#cb78-255" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(boys<span class="sc">$</span>age) <span class="co">#standard deviation for age</span></span>
+<span id="cb78-256"><a href="#cb78-256" aria-hidden="true" tabindex="-1"></a><span class="fu">sd</span>(boys<span class="sc">$</span>bmi, <span class="at">na.rm =</span> <span class="cn">TRUE</span>) <span class="co">#standard deviation for bmi</span></span>
+<span id="cb78-257"><a href="#cb78-257" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb78-258"><a href="#cb78-258" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-259"><a href="#cb78-259" aria-hidden="true" tabindex="-1"></a>Note that <span class="in">`bmi`</span> contains 21 missing values, e.g. by looking at the summary information. Therefor we need to use <span class="in">`na.rm = T`</span> to calculate the standard deviation on the observed cases only.</span>
+<span id="cb78-260"><a href="#cb78-260" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-261"><a href="#cb78-261" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb78-262"><a href="#cb78-262" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-263"><a href="#cb78-263" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercise 12-14: Filtering the CSV</span></span>
+<span id="cb78-264"><a href="#cb78-264" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-265"><a href="#cb78-265" aria-hidden="true" tabindex="-1"></a><span class="ss">12. </span>**Select all boys that are 20 years or older. How many are there?**</span>
+<span id="cb78-266"><a href="#cb78-266" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-267"><a href="#cb78-267" aria-hidden="true" tabindex="-1"></a>The logical operators (TRUE vs FALSE) are a very powerful tool in <span class="in">`R`</span>. For example, we can just select the rows (respondents) in the data that are older than 20 by putting the logical operater within the row index of the dataset:</span>
+<span id="cb78-270"><a href="#cb78-270" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb78-271"><a href="#cb78-271" aria-hidden="true" tabindex="-1"></a>boys2 <span class="ot">&lt;-</span> boys[(boys<span class="sc">$</span>age <span class="sc">&gt;=</span> <span class="dv">20</span>), ]</span>
+<span id="cb78-272"><a href="#cb78-272" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(boys2)</span>
+<span id="cb78-273"><a href="#cb78-273" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb78-274"><a href="#cb78-274" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb78-275"><a href="#cb78-275" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-276"><a href="#cb78-276" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-277"><a href="#cb78-277" aria-hidden="true" tabindex="-1"></a>or, alternatively (the tidy way), </span>
-<span id="cb78-280"><a href="#cb78-280" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb78-281"><a href="#cb78-281" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr) <span class="co"># library to filter</span></span>
-<span id="cb78-282"><a href="#cb78-282" aria-hidden="true" tabindex="-1"></a>boys2 <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(boys, age <span class="sc">&gt;=</span> <span class="dv">20</span>)</span>
-<span id="cb78-283"><a href="#cb78-283" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(boys2)</span>
-<span id="cb78-284"><a href="#cb78-284" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb78-285"><a href="#cb78-285" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-286"><a href="#cb78-286" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb78-287"><a href="#cb78-287" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-288"><a href="#cb78-288" aria-hidden="true" tabindex="-1"></a><span class="ss">13. </span>**Select all boys that are older than 19, but younger than 19.5. How many are there?**</span>
-<span id="cb78-291"><a href="#cb78-291" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb78-292"><a href="#cb78-292" aria-hidden="true" tabindex="-1"></a>boys3 <span class="ot">&lt;-</span> boys[(boys<span class="sc">$</span>age <span class="sc">&gt;</span> <span class="dv">19</span>) <span class="sc">&amp;</span> (boys<span class="sc">$</span>age <span class="sc">&lt;</span> <span class="fl">19.5</span>), ]</span>
-<span id="cb78-293"><a href="#cb78-293" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(boys3)</span>
-<span id="cb78-294"><a href="#cb78-294" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb78-295"><a href="#cb78-295" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-296"><a href="#cb78-296" aria-hidden="true" tabindex="-1"></a>or, alternatively, </span>
-<span id="cb78-299"><a href="#cb78-299" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb78-300"><a href="#cb78-300" aria-hidden="true" tabindex="-1"></a>boys3 <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(boys, age <span class="sc">&gt;</span> <span class="dv">19</span>, age <span class="sc">&lt;</span> <span class="fl">19.5</span>)</span>
-<span id="cb78-301"><a href="#cb78-301" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(boys3)</span>
-<span id="cb78-302"><a href="#cb78-302" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb78-303"><a href="#cb78-303" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-304"><a href="#cb78-304" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb78-305"><a href="#cb78-305" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-306"><a href="#cb78-306" aria-hidden="true" tabindex="-1"></a><span class="ss">14. </span>**What is the mean age of boys younger than 15 years of age that do not live in region `north`?**</span>
-<span id="cb78-307"><a href="#cb78-307" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-310"><a href="#cb78-310" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb78-311"><a href="#cb78-311" aria-hidden="true" tabindex="-1"></a>age_subset <span class="ot">&lt;-</span> boys[(boys<span class="sc">$</span>age <span class="sc">&lt;</span> <span class="dv">15</span>) <span class="sc">&amp;</span> (boys<span class="sc">$</span>reg <span class="sc">!=</span> <span class="st">&quot;north&quot;</span>), ]<span class="sc">$</span>age</span>
-<span id="cb78-312"><a href="#cb78-312" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(age_subset, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
-<span id="cb78-313"><a href="#cb78-313" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb78-314"><a href="#cb78-314" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-315"><a href="#cb78-315" aria-hidden="true" tabindex="-1"></a>or, alternatively, </span>
-<span id="cb78-318"><a href="#cb78-318" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb78-319"><a href="#cb78-319" aria-hidden="true" tabindex="-1"></a>age_subset <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(boys, (age <span class="sc">&lt;</span> <span class="dv">15</span>), (reg <span class="sc">!=</span> <span class="st">&quot;north&quot;</span>))<span class="sc">$</span>age</span>
-<span id="cb78-320"><a href="#cb78-320" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(age_subset, <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
-<span id="cb78-321"><a href="#cb78-321" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb78-322"><a href="#cb78-322" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-323"><a href="#cb78-323" aria-hidden="true" tabindex="-1"></a>The mean age is <span class="in">`r mean(boys$age[boys$age &lt; 15 &amp; boys$reg != &quot;north&quot; ], na.rm = TRUE)`</span> years</span>
+<span id="cb78-276"><a href="#cb78-276" aria-hidden="true" tabindex="-1"></a>or, alternatively (the tidy way), </span>
+<span id="cb78-279"><a href="#cb78-279" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb78-280"><a href="#cb78-280" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr) <span class="co"># library to filter</span></span>
+<span id="cb78-281"><a href="#cb78-281" aria-hidden="true" tabindex="-1"></a>boys2 <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(boys, age <span class="sc">&gt;=</span> <span class="dv">20</span>)</span>
+<span id="cb78-282"><a href="#cb78-282" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(boys2)</span>
+<span id="cb78-283"><a href="#cb78-283" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb78-284"><a href="#cb78-284" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-285"><a href="#cb78-285" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb78-286"><a href="#cb78-286" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-287"><a href="#cb78-287" aria-hidden="true" tabindex="-1"></a><span class="ss">13. </span>**Select all boys that are older than 19, but younger than 19.5. How many are there?**</span>
+<span id="cb78-290"><a href="#cb78-290" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb78-291"><a href="#cb78-291" aria-hidden="true" tabindex="-1"></a>boys3 <span class="ot">&lt;-</span> boys[(boys<span class="sc">$</span>age <span class="sc">&gt;</span> <span class="dv">19</span>) <span class="sc">&amp;</span> (boys<span class="sc">$</span>age <span class="sc">&lt;</span> <span class="fl">19.5</span>), ]</span>
+<span id="cb78-292"><a href="#cb78-292" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(boys3)</span>
+<span id="cb78-293"><a href="#cb78-293" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb78-294"><a href="#cb78-294" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-295"><a href="#cb78-295" aria-hidden="true" tabindex="-1"></a>or, alternatively, </span>
+<span id="cb78-298"><a href="#cb78-298" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb78-299"><a href="#cb78-299" aria-hidden="true" tabindex="-1"></a>boys3 <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(boys, age <span class="sc">&gt;</span> <span class="dv">19</span>, age <span class="sc">&lt;</span> <span class="fl">19.5</span>)</span>
+<span id="cb78-300"><a href="#cb78-300" aria-hidden="true" tabindex="-1"></a><span class="fu">nrow</span>(boys3)</span>
+<span id="cb78-301"><a href="#cb78-301" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb78-302"><a href="#cb78-302" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-303"><a href="#cb78-303" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb78-304"><a href="#cb78-304" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-305"><a href="#cb78-305" aria-hidden="true" tabindex="-1"></a><span class="ss">14. </span>**What is the mean age of boys younger than 15 years of age that do not live in region `north`?**</span>
+<span id="cb78-306"><a href="#cb78-306" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-309"><a href="#cb78-309" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb78-310"><a href="#cb78-310" aria-hidden="true" tabindex="-1"></a>age_subset <span class="ot">&lt;-</span> boys[(boys<span class="sc">$</span>age <span class="sc">&lt;</span> <span class="dv">15</span>) <span class="sc">&amp;</span> (boys<span class="sc">$</span>reg <span class="sc">!=</span> <span class="st">&quot;north&quot;</span>), ]<span class="sc">$</span>age</span>
+<span id="cb78-311"><a href="#cb78-311" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(age_subset, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb78-312"><a href="#cb78-312" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb78-313"><a href="#cb78-313" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-314"><a href="#cb78-314" aria-hidden="true" tabindex="-1"></a>or, alternatively, </span>
+<span id="cb78-317"><a href="#cb78-317" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb78-318"><a href="#cb78-318" aria-hidden="true" tabindex="-1"></a>age_subset <span class="ot">&lt;-</span> dplyr<span class="sc">::</span><span class="fu">filter</span>(boys, (age <span class="sc">&lt;</span> <span class="dv">15</span>), (reg <span class="sc">!=</span> <span class="st">&quot;north&quot;</span>))<span class="sc">$</span>age</span>
+<span id="cb78-319"><a href="#cb78-319" aria-hidden="true" tabindex="-1"></a><span class="fu">mean</span>(age_subset, <span class="at">na.rm=</span><span class="cn">TRUE</span>)</span>
+<span id="cb78-320"><a href="#cb78-320" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb78-321"><a href="#cb78-321" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-322"><a href="#cb78-322" aria-hidden="true" tabindex="-1"></a>The mean age is <span class="in">`r mean(boys$age[boys$age &lt; 15 &amp; boys$reg != &quot;north&quot; ], na.rm = TRUE)`</span> years</span>
+<span id="cb78-323"><a href="#cb78-323" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb78-324"><a href="#cb78-324" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-325"><a href="#cb78-325" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-326"><a href="#cb78-326" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercises 15-17:  Visualization</span></span>
-<span id="cb78-327"><a href="#cb78-327" aria-hidden="true" tabindex="-1"></a>Download the file <span class="in">`example_csv.csv`</span> from <span class="co">[</span><span class="ot">here</span><span class="co">](https://hanneoberman.github.io/rijksR/content/common_datasets/dataset_boys.csv)</span>{target=&quot;_blank&quot;} and add it to your data folder.</span>
-<span id="cb78-328"><a href="#cb78-328" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-329"><a href="#cb78-329" aria-hidden="true" tabindex="-1"></a>Open the file in your text editor to see how it looks. What is the first line?</span>
-<span id="cb78-330"><a href="#cb78-330" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-331"><a href="#cb78-331" aria-hidden="true" tabindex="-1"></a><span class="ss">15. </span>**Read the file and save it with the name &quot;df_events&quot;.** You&#39;ll need to use the argument &quot;skip&quot; in the <span class="in">`read_delim()`</span> function to skip the first line. Make sure it looks fine by printing the head.</span>
-<span id="cb78-332"><a href="#cb78-332" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-335"><a href="#cb78-335" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb78-336"><a href="#cb78-336" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo=FALSE</span></span>
-<span id="cb78-337"><a href="#cb78-337" aria-hidden="true" tabindex="-1"></a><span class="co">#Reading data in background</span></span>
-<span id="cb78-338"><a href="#cb78-338" aria-hidden="true" tabindex="-1"></a>df_events <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_delim</span>(<span class="st">&quot;./common_datasets/example_csv.csv&quot;</span>, <span class="at">skip =</span> <span class="dv">1</span>)</span>
-<span id="cb78-339"><a href="#cb78-339" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb78-340"><a href="#cb78-340" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-343"><a href="#cb78-343" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb78-344"><a href="#cb78-344" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval=FALSE</span></span>
-<span id="cb78-345"><a href="#cb78-345" aria-hidden="true" tabindex="-1"></a>df_events <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_delim</span>(<span class="st">&quot;data/example_csv.csv&quot;</span>, <span class="at">skip =</span> <span class="dv">1</span>)</span>
-<span id="cb78-346"><a href="#cb78-346" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_events)</span>
-<span id="cb78-347"><a href="#cb78-347" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb78-348"><a href="#cb78-348" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-351"><a href="#cb78-351" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb78-352"><a href="#cb78-352" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_events)</span>
-<span id="cb78-353"><a href="#cb78-353" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
-<span id="cb78-354"><a href="#cb78-354" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-355"><a href="#cb78-355" aria-hidden="true" tabindex="-1"></a><span class="ss">16. </span>**Print summary statistics of the dataset**</span>
-<span id="cb78-358"><a href="#cb78-358" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb78-359"><a href="#cb78-359" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df_events)</span>
-<span id="cb78-360"><a href="#cb78-360" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb78-325"><a href="#cb78-325" aria-hidden="true" tabindex="-1"></a><span class="fu">## Exercises 15-17:  Visualization</span></span>
+<span id="cb78-326"><a href="#cb78-326" aria-hidden="true" tabindex="-1"></a>Download the file <span class="in">`example_csv.csv`</span> from <span class="co">[</span><span class="ot">here</span><span class="co">](content/common_datasets/dataset_boys.csv)</span>{target=&quot;_blank&quot;} and add it to your data folder.</span>
+<span id="cb78-327"><a href="#cb78-327" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-328"><a href="#cb78-328" aria-hidden="true" tabindex="-1"></a>Open the file in your text editor to see how it looks. What is the first line?</span>
+<span id="cb78-329"><a href="#cb78-329" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-330"><a href="#cb78-330" aria-hidden="true" tabindex="-1"></a><span class="ss">15. </span>**Read the file and save it with the name &quot;df_events&quot;.** You&#39;ll need to use the argument &quot;skip&quot; in the <span class="in">`read_delim()`</span> function to skip the first line. Make sure it looks fine by printing the head.</span>
+<span id="cb78-331"><a href="#cb78-331" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-334"><a href="#cb78-334" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb78-335"><a href="#cb78-335" aria-hidden="true" tabindex="-1"></a><span class="co">#| echo=FALSE</span></span>
+<span id="cb78-336"><a href="#cb78-336" aria-hidden="true" tabindex="-1"></a><span class="co">#Reading data in background</span></span>
+<span id="cb78-337"><a href="#cb78-337" aria-hidden="true" tabindex="-1"></a>df_events <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_delim</span>(<span class="st">&quot;./common_datasets/example_csv.csv&quot;</span>, <span class="at">skip =</span> <span class="dv">1</span>)</span>
+<span id="cb78-338"><a href="#cb78-338" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb78-339"><a href="#cb78-339" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-342"><a href="#cb78-342" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb78-343"><a href="#cb78-343" aria-hidden="true" tabindex="-1"></a><span class="co">#| eval=FALSE</span></span>
+<span id="cb78-344"><a href="#cb78-344" aria-hidden="true" tabindex="-1"></a>df_events <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_delim</span>(<span class="st">&quot;data/example_csv.csv&quot;</span>, <span class="at">skip =</span> <span class="dv">1</span>)</span>
+<span id="cb78-345"><a href="#cb78-345" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_events)</span>
+<span id="cb78-346"><a href="#cb78-346" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb78-347"><a href="#cb78-347" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-350"><a href="#cb78-350" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb78-351"><a href="#cb78-351" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_events)</span>
+<span id="cb78-352"><a href="#cb78-352" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb78-353"><a href="#cb78-353" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-354"><a href="#cb78-354" aria-hidden="true" tabindex="-1"></a><span class="ss">16. </span>**Print summary statistics of the dataset**</span>
+<span id="cb78-357"><a href="#cb78-357" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb78-358"><a href="#cb78-358" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(df_events)</span>
+<span id="cb78-359"><a href="#cb78-359" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb78-360"><a href="#cb78-360" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb78-361"><a href="#cb78-361" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-362"><a href="#cb78-362" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-363"><a href="#cb78-363" aria-hidden="true" tabindex="-1"></a><span class="ss">17. </span>**Plot the time vs the events using the function `plot` (you&#39;ll learn a better way to plot with Gerko)**</span>
-<span id="cb78-366"><a href="#cb78-366" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
-<span id="cb78-367"><a href="#cb78-367" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(df_events<span class="sc">$</span>Time, df_events<span class="sc">$</span>Number)</span>
-<span id="cb78-368"><a href="#cb78-368" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb78-362"><a href="#cb78-362" aria-hidden="true" tabindex="-1"></a><span class="ss">17. </span>**Plot the time vs the events using the function `plot` (you&#39;ll learn a better way to plot with Gerko)**</span>
+<span id="cb78-365"><a href="#cb78-365" aria-hidden="true" tabindex="-1"></a><span class="in">```{r}</span></span>
+<span id="cb78-366"><a href="#cb78-366" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(df_events<span class="sc">$</span>Time, df_events<span class="sc">$</span>Number)</span>
+<span id="cb78-367"><a href="#cb78-367" aria-hidden="true" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb78-368"><a href="#cb78-368" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb78-369"><a href="#cb78-369" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-370"><a href="#cb78-370" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-371"><a href="#cb78-371" aria-hidden="true" tabindex="-1"></a>--- </span>
-<span id="cb78-372"><a href="#cb78-372" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-373"><a href="#cb78-373" aria-hidden="true" tabindex="-1"></a>Today we have learned to use <span class="in">`R`</span> at its basics. This offers tremendous flexibility, but may also be inefficient when our aim is some complex analysis, data operation of data manipulation. Doing advanced operations in basic <span class="in">`R`</span> may require lots and lots of code. Next you will learn how to use R efficiently. </span>
-<span id="cb78-374"><a href="#cb78-374" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-375"><a href="#cb78-375" aria-hidden="true" tabindex="-1"></a>As you start using <span class="in">`R`</span> in your own research, you will find yourself in need of packages that are not part of the default <span class="in">`R`</span> installation. The beauty of <span class="in">`R`</span> is that its functionality is community-driven. People can add packages to <span class="in">`CRAN`</span> that other people can use and improve. Chances are that a function and/or package has been already developed for the analysis or operation you plan to carry out. If not, you are of course welcome to fill the gap by submitting your own package. </span>
-<span id="cb78-376"><a href="#cb78-376" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-377"><a href="#cb78-377" aria-hidden="true" tabindex="-1"></a>---</span>
-<span id="cb78-378"><a href="#cb78-378" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb78-379"><a href="#cb78-379" aria-hidden="true" tabindex="-1"></a>End of practical</span>
+<span id="cb78-370"><a href="#cb78-370" aria-hidden="true" tabindex="-1"></a>--- </span>
+<span id="cb78-371"><a href="#cb78-371" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-372"><a href="#cb78-372" aria-hidden="true" tabindex="-1"></a>Today we have learned to use <span class="in">`R`</span> at its basics. This offers tremendous flexibility, but may also be inefficient when our aim is some complex analysis, data operation of data manipulation. Doing advanced operations in basic <span class="in">`R`</span> may require lots and lots of code. Next you will learn how to use R efficiently. </span>
+<span id="cb78-373"><a href="#cb78-373" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-374"><a href="#cb78-374" aria-hidden="true" tabindex="-1"></a>As you start using <span class="in">`R`</span> in your own research, you will find yourself in need of packages that are not part of the default <span class="in">`R`</span> installation. The beauty of <span class="in">`R`</span> is that its functionality is community-driven. People can add packages to <span class="in">`CRAN`</span> that other people can use and improve. Chances are that a function and/or package has been already developed for the analysis or operation you plan to carry out. If not, you are of course welcome to fill the gap by submitting your own package. </span>
+<span id="cb78-375"><a href="#cb78-375" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-376"><a href="#cb78-376" aria-hidden="true" tabindex="-1"></a>---</span>
+<span id="cb78-377"><a href="#cb78-377" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-378"><a href="#cb78-378" aria-hidden="true" tabindex="-1"></a>End of practical</span>
 </code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal><i class="bi"></i></button></div>
 </div></div></div></div></div>
 </div> <!-- /content -->
