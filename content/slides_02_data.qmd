@@ -169,13 +169,13 @@ rep(a, 3)
 :::
 
 ## Retrieving elements from vectors by position
+
 If we would want just the third element, we would type
 ```{r, collapse=TRUE}
 #The first element in R is 1 (in other languages (e.g. Python) it is 0)
 a[3]
 ```
 
-::: fragment
 ## Retrieving elements from vectors by range
 If we would want the first to the third (both included)
 ```{r}
@@ -183,7 +183,6 @@ If we would want the first to the third (both included)
 a[1:3]
 ```
 
-:::
 
 ::: fragment
 
