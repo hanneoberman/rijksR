@@ -1443,7 +1443,7 @@
     "href": "content/slides_04_functions.html#time-to-read-data",
     "title": "Functions in R",
     "section": "Time to read data",
-    "text": "Time to read data\nTime to read data:\n\nsystem.time(\n  data_imdb &lt;- readr::read_delim(\"db/title_basics.tsv.gz\", delim = \"\\t\", na = \"\\\\N\", show_col_types = FALSE)\n)\n\n   user  system elapsed \n 26.375   2.890  25.137 \n\n\nTime to query:\n\nsystem.time(\n  results &lt;- data_imdb |&gt; \n    dplyr::group_by(startYear) |&gt; \n    dplyr::summarize(number_movies = n()) |&gt; \n    arrange(number_movies)\n)\n\n   user  system elapsed \n  0.449   0.067   0.518"
+    "text": "Time to read data\nTime to read data:\n\nsystem.time(\n  data_imdb &lt;- readr::read_delim(\"db/title_basics.tsv.gz\", delim = \"\\t\", na = \"\\\\N\", show_col_types = FALSE)\n)\n\n   user  system elapsed \n 26.879   4.427  28.387 \n\n\nTime to query:\n\nsystem.time(\n  results &lt;- data_imdb |&gt; \n    dplyr::group_by(startYear) |&gt; \n    dplyr::summarize(number_movies = n()) |&gt; \n    arrange(number_movies)\n)\n\n   user  system elapsed \n  0.449   0.067   0.518"
   },
   {
     "objectID": "content/slides_04_functions.html#speed-up-using-a-database-sql",

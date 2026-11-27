@@ -23,6 +23,7 @@ format:
       data-background-size: contain
       smaller: true
       widescreen: true
+    monofontoptions: 'Scale=1'
 ---
 
 ```{r, include=FALSE}
